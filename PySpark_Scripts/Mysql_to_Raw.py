@@ -24,5 +24,7 @@ df = spark.read.format("jdbc") \
 
 df.printSchema()
 
+# testing git new branch
+df.count()
 
 
