@@ -149,6 +149,107 @@ Step18) hdfs webui
 http://server_ip:9870
 http://192.168.1.36:9870
 
+HIVE Installation
+Postgres installation
+Step1) In root user, run the below commands
+
+sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+sudo apt-get update
+Step2) Install postgresql-16 
+sudo apt-get install -y postgresql-16 postgresql-contrib-16
+Step3) Now verify
+sudo systemctl status postgresql
+Step4) Now connet to the postgresql server
+sudo su – postgres
+psql
+to print list of users
+\du
+Step5) Give password for the superuser i.e. postgres
+ALTER USER postgres WITH PASSWORD 'admin@123';
+CREATE USER hive WITH PASSWORD 'hive@123';
+make hive user as a superuser
+Step6)to list the databases
+\l
+CREATE DATABASE testDB;
+CREATE DATABASE metastore;
+GRANT ALL ON DATABASE metastore TO hive;
+GRANT ALL ON SCHEMA public TO hive;
+Step7) to switch database
+\c testdb
+CREATE TABLE sample(id INT, name VARCHAR(20));
+Step8) to quit psql
+\q
+to stop postgresql server
+sudo systemctl stop postgresql
+to start again
+sudo systemctl start postgresql
+or
+sudo service postgresql restart
+Step9) to install pgadmin
+sudo apt install curl
+curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
+sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+sudo apt install pgadmin4
+
+Hive Installation
+Step1) sudo su – hadoop
+wget https://downloads.apache.org/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz
+Untar the file
+tar xzf apache-hive-3.1.2-bin.tar.gz
+Step2) now edit env variables
+sudo nano .bashrc
+export HIVE_HOME= /home/hdoop/apache-hive-3.1.2-bin
+export PATH=$PATH:$HIVE_HOME/bin
+source ~/.bashrc
+Step3) sudo nano $HIVE_HOME/bin/hive-config.sh
+
+export HADOOP_HOME = usr/local/hadoop
+Step4) Now create hive related directories in hdfs
+hadoop fs -mkdir /tmp
+hadoop fs -chmod g+w /tmp
+hadoop fs -mkdir -p /user/hive/warehouse
+hadoop fs -chmod g+w /user/hive/warehouse
+Step5) remove guava jar for hive
+cd apache-hive-3.1.2-bin/bin
+ls $HIVE_HOME/lib
+rm $HIVE_HOME/lib/guava-19.0.jar
+cp $HADOOP_HOME/share/hadoop/hdfs/lib/guava-27.0-jre.jar $HIVE_HOME/lib/
+Step6) 
+cd apache-hive-3.1.2-bin
+cd conf
+sudo nano hive-site.xml
+
+<configuration>
+   <property>
+      <name>javax.jdo.option.ConnectionURL</name>
+      <value>jdbc:postgresql://localhost:5432/metastore</value>
+      <description>JDBC Driver Connection for PostgrSQL</description>
+   </property>
+   <property>
+      <name>javax.jdo.option.ConnectionDriverName</name>
+      <value>org.postgresql.Driver</value>
+      <description>PostgreSQL metastore driver class name</description>
+   </property>
+   <property>
+      <name>javax.jdo.option.ConnectionUserName</name>
+      <value>hive</value>
+      <description>Database User Name</description>
+   </property>
+   <property>
+      <name>javax.jdo.option.ConnectionPassword</name>
+      <value>hive@123</value>
+      <description>Database User Password</description>
+   </property>
+</configuration>
+
+Step7) download postgres jar into hive/lib
+cd apache-hive-3.1.2-bin
+cd lib
+wget https://jdbc.postgresql.org/download/postgresql-42.7.1.jar
+step8) schematool -dbType postgres -initSchema
+
+
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
