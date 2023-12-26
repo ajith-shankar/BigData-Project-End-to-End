@@ -76,6 +76,79 @@ ctrl+x to exit
 
 Now run .bashrc by source ~/.bashrc
 
+Step13) sudo nano $HADOOP_HOME/etc/hadoop/core-site.xml
+
+<configuration>
+	<property>
+		<name>fs.defaultFS</name>
+		<value>hdfs://localhost:9000</value>
+		<description>Where HDFS NameNode can be found on the network</description>
+	</property>
+	<property>
+		<name>hadoop.tmp.dir</name>
+		<value>/home/hdoop/tmpdata</value>
+	</property>
+</configuration>
+
+Step14) sudo mkdir -p home/hadoop/dfs
+
+sudo chown -R hadoop:hadoop home/hadoop/dfs
+
+sudo nano $HADOOP_HOME/etc/hadoop/hdfs-site.xml
+
+<configuration>
+    <property>
+	<name>dfs.namenode.name.dir</name>
+	<value>file:/home/hadoop/dfs/namenode</value>
+    </property>
+    <property>
+	<name>dfs.datanode.name.dir</name>
+	<value>file:/home/hadoop/dfs/datanode</value>
+    </property>
+    <property>
+	<name>dfs.namenode.checkpoint.dir</name>
+	<value>file:/home/hadoop/dfs/secondaryname</value>
+    </property>
+    <property>
+	<name>dfs.replication</name>
+	<value>1</value>
+    </property>
+    <property>
+	<name>dfs.blocksize</name>
+	<value>134217728</value>
+    </property>
+</configuration>
+
+Step15) sudo nano $HADOOP_HOME/etc/hadoop/mapred-site.xml
+<configuration>
+   <property>
+      <name>mapreduce.framework.name</name>
+      <value>yarn</value>
+   </property>
+   <property>
+      <name>mapreduce.application.classpath</name>
+      <value>$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*:$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/lib/*</value>
+   </property>
+</configuration>
+
+Step16) sudo nano $HADOOP_HOME/etc/hadoop/hadoop-env.sh
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+export HADOOP_OS_TYPE=${HADOOP_OS_TYPE:-$(uname -s)}
+Step17) sudo nano $HADOOP_HOME/etc/hadoop/yarn-site.xml
+<configuration>
+   <property>
+      <name>yarn.nodemanager.aux-services</name>
+      <value>mapreduce_shuffle</value>
+   </property>
+   <property>
+      <name>yarn.nodemanager.env-whitelist</name>
+      <value>HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,JAVA_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_MAPRED_HOME</value>
+   </property>
+</configuration>
+Step18) hdfs webui
+http://server_ip:9870
+http://192.168.1.36:9870
+
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
