@@ -318,6 +318,32 @@ sudo nano ~/.bashrc
 export PATH=$PATH:/home/hadoop/spark-3.3.4-bin-hadoop3/bin
 source ~/.bashrc
 
+Step12) now test spark-submit 
+create a simple python program
+sudo nano sample.py
+spark-submit --master yarn sample.py
+Step13) To remove INFO msg from the output window
+cd /home/hadoop/spark-3.3.4-bin-hadoop3/conf
+ls
+cp log4j2.properties.template log4j2.properties
+sudo nano log4j2.properties
+change (info to WARN) 
+rootLogger.level = info 
+rootLogger.level = WARN
+
+Step14) spark web ui
+http://localhost/8088
+http://192.168.1.36:8088/cluster
+Spark History web ui setup
+cd /home/hadoop/spark-3.3.4-bin-hadoop3/sbin
+ls -lrt *history* 
+./start-history-server.sh
+history server
+http://localhost/18080
+http://192.168.1.36/18080
+
+
+
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
