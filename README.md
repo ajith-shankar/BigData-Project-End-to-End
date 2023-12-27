@@ -247,8 +247,76 @@ Step7) download postgres jar into hive/lib
 cd apache-hive-3.1.2-bin
 cd lib
 wget https://jdbc.postgresql.org/download/postgresql-42.7.1.jar
+
 step8) schematool -dbType postgres -initSchema
 
+
+Spark Installation
+step1) sudo su - hadoop
+sudo nano ~/.bashrc
+
+export PYSPARK_PYTHON=python3
+export YARN_CONF_DIR=
+step2) cd apache-hive-3.1.2-bin
+cd conf
+sudo nano hive-site.xml
+<property>
+   <name>hive.metastore.schema.verification</name>
+   <value>false</value>
+</property>
+Step3) now download spark 
+wget https://downloads.apache.org/spark/spark-3.3.4/spark-3.3.4-bin-hadoop3.tgz
+untar the file
+tar xzf spark-3.3.4-bin-hadoop3.tgz
+Step4) now setup configuration
+cd spark-3.3.4-bin-hadoop3.tgz
+cd conf
+sudo nano spark-env.sh
+export HADOOP_HOME="/usr/local/hadoop"
+export HADOOP_CONF_DIR="/usr/local/hadoop/etc/hadoop"
+#export SPARK_DIST_CLASSPATH=$(hadoop --config ${HADOOP_CONF_DIR} classpath)
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HADOOP_HOME/lib/native
+Step5) sudo nano spark-defaults.conf
+spark.driver.extraJavaOptions     -Dderby.system.home=/tmp/derby/
+spark.sql.repl.eagerEval.enabled  true
+spark.master                      yarn
+spark.eventLog.enabled            true
+spark.eventLog.dir                hdfs:///spark-logs
+spark.history.provider            org.apache.spark.deploy.history.FsHistoryProvider
+spark.history.fs.logDirectory     hdfs:///spark-logs
+spark.history.fs.update.interval  10s
+spark.history.ui.port             18080
+spark.yarn.historyServer.address  localhost:18080
+spark.yarn.jars                   hdfs:///spark-jars/*.jar
+Step6) hdfs dfs -mkdir /spark-logs
+hdfs dfs -mkdir /spark-jars
+hdfs dfs -put /home/hadoop/spark-3.3.4-bin-hadoop3/jars/* /spark-jars
+Step7) Now inter link Spark with Hive to access hive tables in spark
+sudo ln -s  /home/hadoop/apache-hive-3.1.2-bin/conf/hive-site.xml /home/hadoop/spark-3.3.4-bin-hadoop3/conf/
+Step8) Now install postgresql jar inside spark jar folder
+cd /home/hadoop/spark-3.3.4-bin-hadoop3/jars
+sudo wget https://jdbc.postgresql.org/download/postgresql-42.7.1.jar 
+Now spark setup is complete
+Step9) test spark using spark-shell and pyspark
+cd
+/home/hadoop/spark-3.3.4-bin-hadoop3/bin/spark-shell --master yarn --conf spark.ui.port=0
+:quit
+/home/hadoop/spark-3.3.4-bin-hadoop3/bin/pyspark --master yarn --conf spark.ui.port=0
+exit()
+Step10) verify pyspark
+/home/hadoop/spark-3.3.4-bin-hadoop3/bin/pyspark --master yarn --conf spark.ui.port=0
+create a rdd
+rdd=sc.parallelize([1,2,3])
+for i in rdd.take(3) : print(i)
+now test hive using spark
+spark.sql(“show databases”).show()
+spark.sql("use test").show()
+spark.sql("select * from testtable").show()
+Step11) Instead of using pyspark full path just set path in .bashrc file
+
+sudo nano ~/.bashrc
+export PATH=$PATH:/home/hadoop/spark-3.3.4-bin-hadoop3/bin
+source ~/.bashrc
 
 ## Environment Variables
 
