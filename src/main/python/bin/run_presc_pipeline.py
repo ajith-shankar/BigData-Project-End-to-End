@@ -1,15 +1,17 @@
 # import all the necessary modules
 import get_all_variables as gav
 from create_objects import get_spark_object
+from validations import get_curr_date
 
 
 def main():
-    # get all the variables
+    # get Spark objects
     spark = get_spark_object(gav.envn, gav.appName)
     print("Spark object is created...")
 
-    # get Spark objects
     # validate spark object
+    get_curr_date(spark)
+    
     # setup logging mechanism
     # setup error handling mechanism
 
