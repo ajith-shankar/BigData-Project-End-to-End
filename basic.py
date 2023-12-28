@@ -1,6 +1,7 @@
-print("Start ...")
-  
 from pyspark.sql import SparkSession
+
+print("Start ......")
+
 spark = SparkSession \
        .builder \
        .master('yarn') \
