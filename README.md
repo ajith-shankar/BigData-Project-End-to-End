@@ -67,7 +67,7 @@ Step12) set environment path
 sudo nano ~/.bashrc
 
 press ctrl+/ to goto the last line, and type
-export HADOOP_HOME = usr/local/hadoop
+export HADOOP_HOME = /usr/local/hadoop
 export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
 
@@ -204,7 +204,7 @@ export PATH=$PATH:$HIVE_HOME/bin
 source ~/.bashrc
 Step3) sudo nano $HIVE_HOME/bin/hive-config.sh
 
-export HADOOP_HOME = usr/local/hadoop
+export HADOOP_HOME = /usr/local/hadoop
 Step4) Now create hive related directories in hdfs
 hadoop fs -mkdir /tmp
 hadoop fs -chmod g+w /tmp
@@ -247,16 +247,14 @@ Step7) download postgres jar into hive/lib
 cd apache-hive-3.1.2-bin
 cd lib
 wget https://jdbc.postgresql.org/download/postgresql-42.7.1.jar
-
 step8) schematool -dbType postgres -initSchema
-
 
 Spark Installation
 step1) sudo su - hadoop
 sudo nano ~/.bashrc
 
 export PYSPARK_PYTHON=python3
-export YARN_CONF_DIR=
+
 step2) cd apache-hive-3.1.2-bin
 cd conf
 sudo nano hive-site.xml
@@ -269,8 +267,9 @@ wget https://downloads.apache.org/spark/spark-3.3.4/spark-3.3.4-bin-hadoop3.tgz
 untar the file
 tar xzf spark-3.3.4-bin-hadoop3.tgz
 Step4) now setup configuration
-cd spark-3.3.4-bin-hadoop3.tgz
+cd /opt/spark-3.3.4-bin-hadoop3
 cd conf
+sudo cp spark-env.sh.template spark-env.sh
 sudo nano spark-env.sh
 export HADOOP_HOME="/usr/local/hadoop"
 export HADOOP_CONF_DIR="/usr/local/hadoop/etc/hadoop"
@@ -292,16 +291,16 @@ Step6) hdfs dfs -mkdir /spark-logs
 hdfs dfs -mkdir /spark-jars
 hdfs dfs -put /home/hadoop/spark-3.3.4-bin-hadoop3/jars/* /spark-jars
 Step7) Now inter link Spark with Hive to access hive tables in spark
-sudo ln -s  /home/hadoop/apache-hive-3.1.2-bin/conf/hive-site.xml /home/hadoop/spark-3.3.4-bin-hadoop3/conf/
+sudo ln -s  /home/hadoop/apache-hive-3.1.2-bin/conf/hive-site.xml /opt/spark-3.3.4-bin-hadoop3/conf/
 Step8) Now install postgresql jar inside spark jar folder
-cd /home/hadoop/spark-3.3.4-bin-hadoop3/jars
+cd /opt/spark-3.3.4-bin-hadoop3/jars
 sudo wget https://jdbc.postgresql.org/download/postgresql-42.7.1.jar 
 Now spark setup is complete
 Step9) test spark using spark-shell and pyspark
 cd
-/home/hadoop/spark-3.3.4-bin-hadoop3/bin/spark-shell --master yarn --conf spark.ui.port=0
+/opt/spark-3.3.4-bin-hadoop3/bin/spark-shell --master yarn --conf spark.ui.port=0
 :quit
-/home/hadoop/spark-3.3.4-bin-hadoop3/bin/pyspark --master yarn --conf spark.ui.port=0
+/opt/spark-3.3.4-bin-hadoop3/bin/pyspark --master yarn --conf spark.ui.port=0
 exit()
 Step10) verify pyspark
 /home/hadoop/spark-3.3.4-bin-hadoop3/bin/pyspark --master yarn --conf spark.ui.port=0
@@ -315,17 +314,16 @@ spark.sql("select * from testtable").show()
 Step11) Instead of using pyspark full path just set path in .bashrc file
 
 sudo nano ~/.bashrc
-export PATH=$PATH:/home/hadoop/spark-3.3.4-bin-hadoop3/bin
+export PATH=$PATH:/opt/spark-3.3.4-bin-hadoop3/bin
 source ~/.bashrc
-
 Step12) now test spark-submit 
 create a simple python program
 sudo nano sample.py
-spark-submit --master yarn sample.py
+spark-submit --master yarn basic.py
 Step13) To remove INFO msg from the output window
-cd /home/hadoop/spark-3.3.4-bin-hadoop3/conf
+cd /opt/spark-3.3.4-bin-hadoop3/conf
 ls
-cp log4j2.properties.template log4j2.properties
+sudo cp log4j2.properties.template log4j2.properties
 sudo nano log4j2.properties
 change (info to WARN) 
 rootLogger.level = info 
@@ -335,13 +333,25 @@ Step14) spark web ui
 http://localhost/8088
 http://192.168.1.36:8088/cluster
 Spark History web ui setup
-cd /home/hadoop/spark-3.3.4-bin-hadoop3/sbin
+cd /opt/spark-3.3.4-bin-hadoop3/sbin
 ls -lrt *history* 
 ./start-history-server.sh
 history server
 http://localhost/18080
 http://192.168.1.36/18080
 
+Project Folder Setup
+Create a project folder
+create a subfolders as src>>main>>python>>bin
+inside bin create all .py scripts
+create a subfolders as src>>main>>python>>logs
+inside logs create all logs file
+create a subfolders as src>>main>>python>>configs
+inside configs create all config files
+create a subfolders as src>>main>>python>>sql
+inside sql create all sql scipts
+create a subfolders as src>>main>>python>>lib
+inside lib keep all jar file
 
 
 ## Environment Variables
