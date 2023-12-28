@@ -1,6 +1,6 @@
 from pyspark.sql import SparkSession
 
-print("Start ...")
+print("Start.....")
 
 spark = SparkSession \
        .builder \
