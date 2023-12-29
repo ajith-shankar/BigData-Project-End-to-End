@@ -4,7 +4,7 @@ def get_curr_date(spark):
         print("Validate the spark object by printing current date : " + str(opDF.collect()))  # convert the dataFrame into list using collect()
 
     except NameError as exp:
-        print("NameError in the method spark_curr_date(). " + str(exp))
+        print("NameError in the method get_curr_date(). " + str(exp))
         raise
     except Exception as exp:
         print("Error in the method spark_curr_date(). " + str(exp))

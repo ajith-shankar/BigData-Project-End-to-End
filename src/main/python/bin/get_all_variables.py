@@ -14,6 +14,6 @@ inferSchema = os.environ['inferSchema']
 appName = "USA Prescriber Report"
 currentPath = os.getcwd()
 staging_dim = currentPath + '/staging/dim'
-staging_fact = currentPath + '/staging/fact'  # to escape \f
+staging_fact = currentPath + '/staging/fact'
 
 
