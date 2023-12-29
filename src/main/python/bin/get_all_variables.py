@@ -1,4 +1,6 @@
 import os
+from pathlib import Path
+
 
 # set environment variables
 os.environ['envn'] = 'Test'
@@ -12,8 +14,11 @@ inferSchema = os.environ['inferSchema']
 
 # Set other variables
 appName = "USA Prescriber Report"
-currentPath = os.getcwd()
-staging_dim = currentPath + '/staging/dim'
-staging_fact = currentPath + '/staging/fact'
+currentPath = Path.cwd()
+staging_dim_path = str(currentPath.parents[1]) + '/staging/Dim'
+staging_fact_path = str(currentPath.parents[1]) + '/staging/Fact'
+
+
+
 
 

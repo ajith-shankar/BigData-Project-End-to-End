@@ -1,0 +1,19 @@
+"30-Dec-23 01:56:46" : root : INFO : run_presc_pipeline.py is started...
+"30-Dec-23 01:56:46" : root : INFO : main() is started...
+"30-Dec-23 01:56:46" : create_objects : INFO : get_spark_object() is started. The 'Test' env is used.
+"30-Dec-23 01:56:52" : create_objects : INFO : Spark Object is created
+"30-Dec-23 01:56:59" : validations : INFO : Validate the spark object by printing current date : [Row(current_date()=datetime.date(2023, 12, 30))]
+"30-Dec-23 01:56:59" : validations : INFO : Spark object is validated and it is ready
+"30-Dec-23 01:56:59" : root : ERROR : Error occurred in the main() method. Path does not exist: hdfs://localhost:9000/home/hadoop/Documents/BigData-Project-End-to-End/src/main/staging/Dim/us_cities_dimension.parquet
+Traceback (most recent call last):
+  File "/home/hadoop/Documents/BigData-Project-End-to-End/src/main/python/bin/run_presc_pipeline.py", line 46, in main
+    df_city = load_files(spark = spark, file_dir = file_dir, file_format =file_format, header = header, inferSchema = inferSchema)
+  File "/home/hadoop/Documents/BigData-Project-End-to-End/src/main/python/bin/run_presc_data_ingest.py", line 5, in load_files
+    df = spark.read.format(file_format).load(file_dir)
+  File "/home/hadoop/spark-3.3.4-bin-hadoop3/python/pyspark/sql/readwriter.py", line 177, in load
+    return self._df(self._jreader.load(path))
+  File "/home/hadoop/spark-3.3.4-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip/py4j/java_gateway.py", line 1321, in __call__
+    return_value = get_return_value(
+  File "/home/hadoop/spark-3.3.4-bin-hadoop3/python/pyspark/sql/utils.py", line 196, in deco
+    raise converted from None
+pyspark.sql.utils.AnalysisException: Path does not exist: hdfs://localhost:9000/home/hadoop/Documents/BigData-Project-End-to-End/src/main/staging/Dim/us_cities_dimension.parquet
