@@ -15,3 +15,8 @@ def get_spark_object(envn, appName):
         .getOrCreate()
 
     return spark
+def main():
+    pass
+
+if __name__ == "__main__":
+    main()

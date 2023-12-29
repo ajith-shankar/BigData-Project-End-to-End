@@ -8,4 +8,6 @@ def get_curr_date(spark):
         raise
     except Exception as exp:
         print("Error in the method spark_curr_date(). " + str(exp))
+    else:
+        print("Spark object is validated and it is ready")
 
