@@ -17,4 +17,3 @@ staging_dim = currentPath + '/staging/dim'
 staging_fact = currentPath + '/staging/fact'  # to escape \f
 
 
-
