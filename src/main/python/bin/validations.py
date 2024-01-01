@@ -37,27 +37,18 @@ def df_count(df, dfName):
 
 
 def df_top10_rec(df, dfName):
-    try:
-        logger.info(f"The DataFrame validation by top 10 record df_top10_rec() is started for the dataframe {dfName} ...")
-        logger.info(f"The DataFrame top 10 records are:...")
-        df_pandas = df.toPandas().head(10)  # convert the df into pandas df
-        logger.info('\n \t' + df_pandas.to_string(index=False))
-    except Exception as exp:
-        logger.error("Error in the method df_top10_rec(). " + str(exp))
-        raise
-    else:
-        logger.info("The DataFrame validation by top 10 record df_top10_rec() is completed.")
+    pass
 
 
-def df_print_schema(df, dfName):
-    try:
-        logger.info(f"The DataFrame Schema validation for dataframe {dfName} ...")
-        sch = df.schema.fields
-        logger.info(f"The Dataframe {dfName} schema is: ")
-        for i in sch:
-            logger.info(f"\t{i}")
-    except Exception as exp:
-        logger.error("Error in the method df_print_schema(). " + str(exp))
-        raise
-    else:
-        logger.info("The DataFrame schema validation is completed.")
+# def df_print_schema(df, dfName):
+#     try:
+#         logger.info(f"The DataFrame Schema validation for dataframe {dfName} ...")
+#         sch = df.schema.fields
+#         logger.info(f"The Dataframe {dfName} schema is: ")
+#         for i in sch:
+#             logger.info(f"\t{i}")
+#     except Exception as exp:
+#         logger.error("Error in the method df_print_schema(). " + str(exp))
+#         raise
+#     else:
+#         logger.info("The DataFrame schema validation is completed.")
