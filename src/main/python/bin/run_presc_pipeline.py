@@ -1,13 +1,14 @@
 # import all the necessary modules
 import get_all_variables as gav
 from create_objects import get_spark_object
-from validations import get_curr_date, df_count, df_top10_rec
+from presc_run_data_preprocessor import perform_data_clean
+from validations import get_curr_date, df_count, df_top10_rec, df_print_schema
+from presc_run_data_ingest import load_files
 import sys
 import logging
 import logging.config
 from os import path
 import os
-from run_presc_data_ingest import load_files
 
 # load the logging configuration file
 
@@ -28,7 +29,7 @@ def main():
         # validate spark object
         get_curr_date(spark)
 
-        ### initiate run_presc_data_ingest script
+        ### initiate presc_run_data_ingest script
 
         # load the City Dim File
         for file in os.listdir(gav.staging_dim_path):
@@ -49,7 +50,7 @@ def main():
         df_city = load_files(spark=spark, file_dir=file_dir, file_format=file_format, header=header,
                              inferSchema=inferSchema)
 
-        # validate run_presc_data_ingest script for City_Dim dataframe
+        # validate presc_run_data_ingest script for City_Dim dataframe
         df_count(df_city, 'df_city')
         df_top10_rec(df_city, 'df_city')
 
@@ -72,16 +73,19 @@ def main():
         df_fact = load_files(spark=spark, file_dir=file_dir, file_format=file_format, header=header,
                              inferSchema=inferSchema)
 
-        # validate run_presc_data_ingest script for Presc_Fact dataframe
+        # validate presc_run_data_ingest script for Presc_Fact dataframe
         df_count(df_fact, 'df_fact')
         df_top10_rec(df_fact, 'df_fact')
 
+        ### initiate presc_run_data_preprocessing script
+        # perform dats cleaning for city_dim
+        df_city_sel, df_fact_sel = perform_data_clean(df_city, df_fact)
 
-        # initiate run_presc_data_preprocessing script
-        # perform data cleaning operations
-        # validate
-        # Setup logging config mechanism
-        # setup Error handling mechanism
+        # validate presc_run_data_preprocessor script for City_Dim dataframe and Fact Dataframe
+        df_top10_rec(df_city_sel, 'df_city_sel')
+        df_top10_rec(df_fact_sel, 'df_fact_sel')
+        df_print_schema(df_fact_sel, 'df_fact_sel')
+
 
         # initiate run_presc_data_transform script
         # apply all the transformation logics
