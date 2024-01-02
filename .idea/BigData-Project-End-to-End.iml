@@ -4,7 +4,7 @@
     <content url="file://$MODULE_DIR$" />
     <content url="file://$USER_HOME$/spark-3.3.4-bin-hadoop3/python" />
     <content url="jar://$USER_HOME$/spark-3.3.4-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip!/" />
-    <orderEntry type="jdk" jdkName="Python 3.10 (BigData-Project-End-to-End)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.10 (BigData-Project-End-to-End) (2)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

@@ -2,7 +2,7 @@
 import get_all_variables as gav
 from create_objects import get_spark_object
 from presc_run_data_preprocessor import perform_data_clean
-from validations import get_curr_date, df_count, df_top10_rec
+from validations import get_curr_date, df_count, df_top10_rec, df_print_schema
 from presc_run_data_ingest import load_files
 import sys
 import logging
@@ -84,7 +84,7 @@ def main():
         # validate presc_run_data_preprocessor script for City_Dim dataframe and Fact Dataframe
         df_top10_rec(df_city_sel, 'df_city_sel')
         df_top10_rec(df_fact_sel, 'df_fact_sel')
-        #df_print_schema(df_fact_sel, 'df_fact_sel')
+        df_print_schema(df_fact_sel, 'df_fact_sel')
 
 
         # initiate run_presc_data_transform script

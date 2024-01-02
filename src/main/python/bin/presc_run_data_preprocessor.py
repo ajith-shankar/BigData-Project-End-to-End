@@ -1,6 +1,9 @@
 import logging
 import logging.config
-from pyspark.sql.functions import upper, lit, regexp_extract, col, concat_ws, when, count
+from pyspark.sql.functions import upper, lit, regexp_extract, col, concat_ws, when, count, isnan, when, avg, coalesce, \
+    round
+from pyspark.sql.window import Window
+
 # load the logging configuration file
 logging.config.fileConfig(fname='../utils/logging_to_file.conf')
 # custom logger
@@ -20,7 +23,7 @@ def perform_data_clean(df1, df2):
                                  df1.population,
                                  df1.zips)
 
-        ### clean city DataFrame
+        ### clean fact DataFrame
         # 1 select only required columns
         # 2 Rename the columns
         logger.info(f"perform_data_clean() is started for df_fact dataframe...")
@@ -44,13 +47,24 @@ def perform_data_clean(df1, df2):
         df_fact_sel = df_fact_sel.withColumn("presc_yop", col("presc_yop").cast("int"))
 
         # 6 Combine Frist_Name and Last_Name
-        df_fact_sel = df_fact_sel.withColumn("presc_fullName", concat_ws(" ", "presc_fname",  "presc_lname"))
+        df_fact_sel = df_fact_sel.withColumn("presc_fullName", concat_ws(" ", "presc_fname", "presc_lname"))
         df_fact_sel = df_fact_sel.drop("presc_fname", "presc_lname")  # we don't need these two columns
 
-        # 7 Check and clean all the Null and NaN values
-        df_fact_sel = df_fact_sel.select([count(when(col(c).isNull(), c)).alias(c) for c in df_fact_sel.columns]).show()
+        # 8 Delete the records where the PRESC_ID is NULL
+        df_fact_sel = df_fact_sel.dropna(subset="presc_id")
 
-    # 8 Impute TRX_CNT where it is Null as avg of trx_cnt for the prescriber
+        # 9 Delete the records where the DRUG_NAME is NULL
+        df_fact_sel = df_fact_sel.dropna(subset="drug_name")
+
+        # 10 Impute TRX_CNT where it is Null as avg of trx_cnt for the prescriber
+        spec = Window.partitionBy("presc_id")
+        df_fact_sel = df_fact_sel.withColumn("trx_cnt", coalesce("trx_cnt", round(avg("trx_cnt").over(spec))))
+        df_fact_sel = df_fact_sel.withColumn("trx_cnt", col("trx_cnt").cast('integer'))
+
+        # 7 Check and clean all the Null and NaN values
+        df_fact_sel.select(
+            [count(when(isnan(c) | col(c).isNull(), c)).alias(c) for c in df_fact_sel.columns])
+
 
     except Exception as exp:
         logger.error("Error in the method perform_data_clean(). " + str(exp), exc_info=True)
