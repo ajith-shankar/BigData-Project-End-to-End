@@ -1,4 +1,5 @@
 # import all the necessary modules
+from subprocess import Popen, PIPE
 import get_all_variables as gav
 from create_objects import get_spark_object
 from presc_run_data_preprocessor import perform_data_clean
@@ -33,20 +34,34 @@ def main():
         ### initiate presc_run_data_ingest script
 
         # load the City Dim File
-        for file in os.listdir(gav.staging_dim_path):
-            print("File is " + file)
-            file_dir = 'file://' + gav.staging_dim_path + '/' + file
-            print(file_dir)
+        # Local-
+        # for file in os.listdir(gav.staging_dim_path):
+        #     print("File is " + file)
+        #     file_dir = 'file://' + gav.staging_dim_path + '/' + file
+        #     print(file_dir)
+        #
+        #     if file.split('.')[1] == 'csv':
+        #         file_format = 'csv'
+        #         header = gav.header
+        #         inferSchema = gav.inferSchema
+        #
+        #     elif file.split('.')[1] == 'parquet':
+        #         file_format = 'parquet'
+        #         header = 'NA'
+        #         inferSchema = 'NA'
 
-            if file.split('.')[1] == 'csv':
-                file_format = 'csv'
-                header = gav.header
-                inferSchema = gav.inferSchema
-
-            elif file.split('.')[1] == 'parquet':
-                file_format = 'parquet'
-                header = 'NA'
-                inferSchema = 'NA'
+        # Hdfs -
+        file_dir = "/user/hadoop/Projects/PrescPipeline/staging/Dim"
+        proc = Popen(['hdfs', 'dfs', '-ls', '-c', file_dir], stdout=PIPE, stderr=PIPE)
+        (out, err) = proc.communicate()
+        if 'parquet' in out.decode():
+            file_format = 'parquet'
+            header = 'NA'
+            inferSchema = 'NA'
+        elif 'csv' in out.decode():
+            file_format = 'csv'
+            header = gav.header
+            inferSchema = gav.inferSchema
 
         df_city = load_files(spark=spark, file_dir=file_dir, file_format=file_format, header=header,
                              inferSchema=inferSchema)
@@ -56,20 +71,34 @@ def main():
         df_top10_rec(df_city, 'df_city')
 
         # load the Presc Fact File
-        for file in os.listdir(gav.staging_fact_path):
-            print("File is " + file)
-            file_dir = 'file://' + gav.staging_fact_path + '/' + file
-            print(file_dir)
+        # Local -
+        # for file in os.listdir(gav.staging_fact_path):
+        #     print("File is " + file)
+        #     file_dir = 'file://' + gav.staging_fact_path + '/' + file
+        #     print(file_dir)
+        #
+        #     if file.split('.')[1] == 'csv':
+        #         file_format = 'csv'
+        #         header = gav.header
+        #         inferSchema = gav.inferSchema
+        #
+        #     elif file.split('.')[1] == 'parquet':
+        #         file_format = 'parquet'
+        #         header = 'NA'
+        #         inferSchema = 'NA'
 
-            if file.split('.')[1] == 'csv':
-                file_format = 'csv'
-                header = gav.header
-                inferSchema = gav.inferSchema
-
-            elif file.split('.')[1] == 'parquet':
-                file_format = 'parquet'
-                header = 'NA'
-                inferSchema = 'NA'
+        # Hdfs -
+        file_dir = "/user/hadoop/Projects/PrescPipeline/staging/Fact"
+        proc = Popen(['hdfs', 'dfs', '-ls', '-c', file_dir], stdout=PIPE, stderr=PIPE)
+        (out, err) = proc.communicate()
+        if 'parquet' in out.decode():
+            file_format = 'parquet'
+            header = 'NA'
+            inferSchema = 'NA'
+        elif 'csv' in out.decode():
+            file_format = 'csv'
+            header = gav.header
+            inferSchema = gav.inferSchema
 
         df_fact = load_files(spark=spark, file_dir=file_dir, file_format=file_format, header=header,
                              inferSchema=inferSchema)
@@ -88,14 +117,17 @@ def main():
         df_print_schema(df_fact_sel, 'df_fact_sel')
 
 
-        # initiate run_presc_data_transform script
+        ### initiate run_presc_data_transform script
         df_city_final = city_report(df_city_sel, df_fact_sel)
-        df_fact_final = top5_presc_report(df_fact_sel)
 
         # validate
         df_top10_rec(df_city_final, 'df_city_final')
         df_print_schema(df_city_final, 'df_city_final')
 
+        # transform df_fact
+        df_fact_final = top5_presc_report(df_fact_sel)
+
+        # validate
         df_top10_rec(df_fact_final, 'df_fact_final')
         df_print_schema(df_fact_final, 'df_fact_final')
 
