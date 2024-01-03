@@ -22,4 +22,5 @@ currentPath = os.getcwd()
 staging_dim_path = "/user/hadoop/Projects/PrescPipeline/staging/Dim"
 staging_fact_path = "/user/hadoop/Projects/PrescPipeline/staging/Fact"
 
-
+output_dim = "/user/hadoop/Projects/PrescPipeline/Output/Dim"
+output_fact = "/user/hadoop/Projects/PrescPipeline/Output/Fact"
