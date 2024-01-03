@@ -4,6 +4,7 @@ from create_objects import get_spark_object
 from presc_run_data_preprocessor import perform_data_clean
 from validations import get_curr_date, df_count, df_top10_rec, df_print_schema
 from presc_run_data_ingest import load_files
+from presc_run_data_transform import city_report, top5_presc_report
 import sys
 import logging
 import logging.config
@@ -88,10 +89,16 @@ def main():
 
 
         # initiate run_presc_data_transform script
-        # apply all the transformation logics
+        df_city_final = city_report(df_city_sel, df_fact_sel)
+        df_fact_final = top5_presc_report(df_fact_sel)
+
         # validate
-        # Setup logging config mechanism
-        # setup Error handling mechanism
+        df_top10_rec(df_city_final, 'df_city_final')
+        df_print_schema(df_city_final, 'df_city_final')
+
+        df_top10_rec(df_fact_final, 'df_fact_final')
+        df_print_schema(df_fact_final, 'df_fact_final')
+
         logging.info("run_presc_pipeline.py is completed")
 
     except Exception as exp:
