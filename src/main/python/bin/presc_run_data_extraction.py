@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 def extract_files(df, fileFormat, filePath, split_no, headerReq, compressionType):
     try:
-        logger.info("The Extraction extract_files() is started ...")
+        logger.info("The Extraction - extract_files() is started ...")
         df.coalesce(split_no) \
           .write \
           .format(fileFormat) \
@@ -18,5 +18,5 @@ def extract_files(df, fileFormat, filePath, split_no, headerReq, compressionType
         logger.error("Error in the method extract_files(). " + str(exp), exc_info=True)
         raise
     else:
-        logger.info("The Extraction extract_files() is completed")
+        logger.info("The Extraction - extract_files() is completed")
 

@@ -133,12 +133,13 @@ def main():
         df_print_schema(df_fact_final, 'df_fact_final')
 
         ### Initiate presc_run_data_extraction script
-        # dim_path = gav.output_dim
-        # extract_files(df_city_final, 'json', dim_path, 1, False, 'bzip2')
-        #
-        # fact_path = gav.output_fact
-        # extract_files(df_fact_final, 'orc', fact_path, 2, False, 'snappy')
+        dim_path = gav.output_dim
+        extract_files(df_city_final, 'json', dim_path, 1, False, 'bzip2')
 
+        fact_path = gav.output_fact
+        extract_files(df_fact_final, 'orc', fact_path, 2, False, 'snappy')
+
+        ### End of part 1
         logging.info("run_presc_pipeline.py is completed")
 
     except Exception as exp:
