@@ -25,7 +25,7 @@ LOCAL_STAGING_PATH="/home/hadoop/Projects/BigData-Project-End-to-End/src/main/st
 LOCAL_DIM_DIR=${LOCAL_STAGING_PATH}/Dim
 LOCAL_FACT_DIR=${LOCAL_STAGING_PATH}/Fact
 
-HDFS_STAGING_PATH=Projects/PrescPipeline/staging
+HDFS_STAGING_PATH=/user/hadoop/Projects/PrescPipeline/staging
 HDFS_DIM_DIR=${HDFS_STAGING_PATH}/Dim
 HDFS_FACT_DIR=${HDFS_STAGING_PATH}/Fact
 

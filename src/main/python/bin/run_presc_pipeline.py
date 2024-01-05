@@ -53,7 +53,7 @@ def main():
 
         # Hdfs -
         file_dir = "/user/hadoop/Projects/PrescPipeline/staging/Dim"
-        proc = Popen(['hdfs', 'dfs', '-ls', '-c', file_dir], stdout=PIPE, stderr=PIPE)
+        proc = Popen(['hdfs', 'dfs', '-ls', '-C', file_dir], stdout=PIPE, stderr=PIPE)
         (out, err) = proc.communicate()
         if 'parquet' in out.decode():
             file_format = 'parquet'
@@ -90,7 +90,7 @@ def main():
 
         # Hdfs -
         file_dir = "/user/hadoop/Projects/PrescPipeline/staging/Fact"
-        proc = Popen(['hdfs', 'dfs', '-ls', '-c', file_dir], stdout=PIPE, stderr=PIPE)
+        proc = Popen(['hdfs', 'dfs', '-ls', '-C', file_dir], stdout=PIPE, stderr=PIPE)
         (out, err) = proc.communicate()
         if 'parquet' in out.decode():
             file_format = 'parquet'
