@@ -34,7 +34,7 @@ hdfs dfs -get -f ${HDFS_DIM_DIR}/* ${LOCAL_DIM_DIR}/
 hdfs dfs -get -f ${HDFS_FACT_DIR}/* ${LOCAL_FACT_DIR}/
 
 echo "${JOBNAME} is Completed...: $(date)"
-} > ${LOGFILE} 2>&1  # <--- End of program and end of log.
+} > ${LOGFILE} 2>&1  #  <--- End of program and end of log.
 
 
 
