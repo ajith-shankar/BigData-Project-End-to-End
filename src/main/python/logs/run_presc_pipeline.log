@@ -1,19 +1,19 @@
-"05-Jan-24 23:59:20" : numexpr.utils : INFO : NumExpr defaulting to 4 threads.
-"05-Jan-24 23:59:20" : root : INFO : run_presc_pipeline.py is started...
-"05-Jan-24 23:59:20" : root : INFO : main() is started...
-"05-Jan-24 23:59:20" : create_objects : INFO : get_spark_object() is started. The 'Prod' env is used.
-"06-Jan-24 00:00:09" : create_objects : INFO : Spark Object is created
-"06-Jan-24 00:00:21" : validations : INFO : Validate the spark object by printing current date : [Row(current_date()=datetime.date(2024, 1, 6))]
-"06-Jan-24 00:00:21" : validations : INFO : Spark object is validated and it is ready
-"06-Jan-24 00:00:23" : presc_run_data_ingest : INFO : The load_files() is started ...
-"06-Jan-24 00:00:26" : presc_run_data_ingest : INFO : The input file /user/hadoop/Projects/PrescPipeline/staging/Dim is loaded to the data frame
-"06-Jan-24 00:00:26" : presc_run_data_ingest : INFO : The load_files() is completed ...
-"06-Jan-24 00:00:26" : validations : INFO : The DataFrame validation by count df_count() is started for the dataframe df_city ...
-"06-Jan-24 00:00:27" : validations : INFO : The dataframe count is 28338.
-"06-Jan-24 00:00:27" : validations : INFO : The DataFrame validation by count df_count() is completed.
-"06-Jan-24 00:00:27" : validations : INFO : The DataFrame validation by top 10 record df_top10_rec() is started for DataFrame df_city ..
-"06-Jan-24 00:00:27" : validations : INFO : The DataFrame top 10 records are: ...
-"06-Jan-24 00:00:28" : validations : INFO : 
+"06-Jan-24 00:24:18" : numexpr.utils : INFO : NumExpr defaulting to 4 threads.
+"06-Jan-24 00:24:18" : root : INFO : run_presc_pipeline.py is started...
+"06-Jan-24 00:24:18" : root : INFO : main() is started...
+"06-Jan-24 00:24:18" : create_objects : INFO : get_spark_object() is started. The 'Prod' env is used.
+"06-Jan-24 00:24:34" : create_objects : INFO : Spark Object is created
+"06-Jan-24 00:24:42" : validations : INFO : Validate the spark object by printing current date : [Row(current_date()=datetime.date(2024, 1, 6))]
+"06-Jan-24 00:24:42" : validations : INFO : Spark object is validated and it is ready
+"06-Jan-24 00:24:44" : presc_run_data_ingest : INFO : The load_files() is started ...
+"06-Jan-24 00:24:46" : presc_run_data_ingest : INFO : The input file /user/hadoop/Projects/PrescPipeline/staging/Dim is loaded to the data frame
+"06-Jan-24 00:24:46" : presc_run_data_ingest : INFO : The load_files() is completed ...
+"06-Jan-24 00:24:46" : validations : INFO : The DataFrame validation by count df_count() is started for the dataframe df_city ...
+"06-Jan-24 00:24:48" : validations : INFO : The dataframe count is 28338.
+"06-Jan-24 00:24:48" : validations : INFO : The DataFrame validation by count df_count() is completed.
+"06-Jan-24 00:24:48" : validations : INFO : The DataFrame validation by top 10 record df_top10_rec() is started for DataFrame df_city ..
+"06-Jan-24 00:24:48" : validations : INFO : The DataFrame top 10 records are: ...
+"06-Jan-24 00:24:49" : validations : INFO : 
  	        city   city_ascii state_id           state_name  county_fips          county_name     lat       lng  population  density            timezone                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                zips
     New York     New York       NY             New York        36061             New York 40.6943  -73.9249    18713220    10715    America/New_York 11229 11226 11225 11224 11222 11221 11220 11385 10169 10168 10167 10165 10162 10282 10280 10040 10044 11109 11104 11105 11379 11378 11377 11697 11694 11692 11693 11691 10271 10279 10278 10075 10302 10301 10452 11451 10475 10474 10471 10470 10473 10472 11228 11223 10103 11368 11369 11366 11367 11364 11365 11362 11363 11360 11361 10028 10029 10026 10027 10024 10025 10022 10023 10020 10021 11212 11213 11210 11211 11216 11217 11214 11215 11218 11219 10152 10153 10154 10307 10306 10305 11429 10310 10311 10312 10314 11432 11433 11430 11436 11434 11435 10453 10451 10457 10456 10455 10454 10459 10458 10128 10004 10005 10006 10007 10001 10002 10003 10009 11238 11239 11230 11231 11232 11233 11234 11235 11236 11237 11375 11374 11371 11370 11373 11372 10170 10171 10172 10173 10174 10177 11351 10039 10038 10035 10034 10037 10036 10031 10030 10033 10032 11201 11208 11203 11205 11204 11207 11206 11209 11411 11412 11413 11414 11415 11416 11417 11418 11419 11101 11102 11103 11106 11001 11005 11004 10065 10069 10199 10309 10308 10304 10303 11428 11421 11420 11423 11422 11425 11424 11427 11426 10466 10467 10464 10465 10462 10463 10460 10461 10468 10469 10119 10115 10112 10110 10111 11359 11358 11357 11356 11355 11354 10019 10018 10013 10012 10011 10010 10017 10016 10014 10008 10041 10043 10055 10060 10080 10081 10087 10090 10101 10102 10104 10105 10106 10107 10108 10109 10113 10114 10116 10117 10118 10120 10121 10122 10123 10124 10125 10126 10129 10130 10131 10132 10133 10138 10150 10151 10155 10156 10157 10158 10159 10160 10163 10164 10166 10175 10176 10178 10179 10185 10203 10211 10212 10213 10242 10249 10256 10258 10259 10260 10261 10265 10268 10269 10270 10272 10273 10274 10275 10276 10277 10281 10285 10286 10313 11120 11202 11241 11242 11243 11245 11247 11249 11251 11252 11256 11352 11380 11381 11386 11405 11431 11437 11439 11499 11690 11695
  Los Angeles  Los Angeles       CA           California         6037          Los Angeles 34.1139 -118.4068    12750807     3276 America/Los_Angeles                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             90291 90293 90292 91316 91311 90037 90031 90008 90004 90005 90006 90007 90001 90002 90003 90710 90089 91344 91345 91340 91342 91343 90035 90034 90036 90033 90032 90039 90247 90248 91436 91371 91605 91604 91607 91601 91602 90402 90068 90069 90062 90063 90061 90066 90067 90064 90065 91326 91324 91325 90013 90012 90011 90010 90017 90016 90015 90014 90019 90090 90095 90094 91042 91040 91411 91352 91356 90041 90042 90043 90044 90045 90046 90047 90048 90049 90018 91423 90210 91303 91304 91306 91307 90079 90071 90077 90059 91608 91606 91331 91330 91335 90026 90027 90024 90025 90023 90020 90021 90028 90029 90272 90732 90731 90230 91406 91405 91403 91402 91401 91367 91364 90038 90057 90058 90744 90501 90502 90009 90030 90050 90051 90053 90054 90055 90060 90070 90072 90074 90075 90076 90078 90080 90081 90082 90083 90084 90086 90087 90088 90093 90099 90134 90189 90213 90294 90295 90296 90733 90734 90748 91041 91043 91305 91308 91309 91313 91327 91328 91329 91333 91334 91337 91346 91353 91357 91365 91392 91393 91394 91395 91396 91404 91407 91408 91409 91410 91412 91413 91416 91426 91470 91482 91495 91496 91499 91603 91609 91610 91611 91612 91614 91615 91616 91617 91618
@@ -25,16 +25,16 @@ Philadelphia Philadelphia       PA         Pennsylvania        42101         Phi
      Atlanta      Atlanta       GA              Georgia        13121               Fulton 33.7627  -84.4224     5449398     1441    America/New_York                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           30334 30331 30332 30309 30308 30305 30307 30303 30354 30327 30322 30326 30324 30319 30342 30306 30318 30316 30317 30314 30315 30312 30313 30310 30311 30363 30301 30302 30304 30321 30325 30333 30343 30348 30353 30355 30357 30361 30368 30369 30370 30371 30375 30377 30392 30394 30398 31106 31107 31126 31139 31141 31193 31195 31196
   Washington   Washington       DC District of Columbia        11001 District of Columbia 38.9047  -77.0163     5379184     4457    America/New_York                                                                                                                                                 20010 20011 20012 20015 20228 20520 20307 20418 20319 20024 20510 20593 20020 20427 20540 20240 20245 20204 20202 20390 20006 20005 20004 20003 20002 20009 20008 20535 20317 20405 20057 20052 20053 20017 20018 20565 20566 20560 20260 20064 20551 20553 20019 20230 20373 20007 20032 20036 20037 20506 20001 20045 20016 20013 20022 20026 20027 20029 20030 20033 20035 20038 20039 20040 20042 20043 20044 20047 20049 20050 20055 20056 20058 20059 20060 20061 20062 20063 20065 20066 20067 20068 20069 20070 20071 20073 20074 20075 20076 20077 20078 20080 20081 20082 20090 20091 20201 20203 20206 20207 20208 20210 20211 20212 20213 20214 20215 20216 20217 20218 20219 20220 20221 20222 20223 20224 20226 20227 20229 20232 20233 20235 20237 20238 20239 20241 20242 20244 20250 20251 20252 20254 20261 20262 20265 20266 20268 20270 20277 20289 20299 20301 20303 20306 20310 20314 20318 20330 20340 20350 20355 20370 20372 20374 20375 20376 20380 20388 20389 20391 20392 20393 20394 20395 20398 20401 20402 20403 20404 20406 20407 20408 20410 20411 20412 20413 20414 20415 20416 20417 20419 20420 20421 20422 20423 20424 20425 20426 20428 20429 20431 20433 20434 20435 20436 20437 20439 20440 20441 20442 20444 20447 20451 20453 20456 20460 20463 20468 20469 20470 20472 20500 20501 20502 20503 20504 20505 20507 20508 20509 20511 20515 20521 20522 20523 20524 20525 20526 20527 20528 20529 20530 20531 20533 20534 20536 20537 20538 20539 20541 20542 20543 20544 20546 20547 20548 20549 20552 20554 20555 20557 20559 20570 20571 20572 20573 20575 20576 20577 20578 20579 20580 20581 20585 20586 20590 20591 20594 20597 20599 56901 56902 56904 56908 56915 56920 56933 56935 56944 56945 56950 56965 56967 56972 56998 56999
       Boston       Boston       MA        Massachusetts        25025              Suffolk 42.3188  -71.0846     4688346     5532    America/New_York                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   02120 02121 02122 02124 02125 02126 02127 02128 02129 02467 02210 02215 02119 02118 02111 02110 02113 02115 02114 02116 02199 02134 02136 02135 02132 02131 02130 02203 02163 02152 02108 02109 02112 02117 02123 02133 02137 02196 02201 02205 02206 02211 02212 02217 02222 02241 02283 02284 02293 02297 02298
-"06-Jan-24 00:00:28" : validations : INFO : The DataFrame validation by to 10 record df_top10_rec() is completed.
-"06-Jan-24 00:00:31" : presc_run_data_ingest : INFO : The load_files() is started ...
-"06-Jan-24 00:00:34" : presc_run_data_ingest : INFO : The input file /user/hadoop/Projects/PrescPipeline/staging/Fact is loaded to the data frame
-"06-Jan-24 00:00:34" : presc_run_data_ingest : INFO : The load_files() is completed ...
-"06-Jan-24 00:00:34" : validations : INFO : The DataFrame validation by count df_count() is started for the dataframe df_fact ...
-"06-Jan-24 00:00:34" : validations : INFO : The dataframe count is 105.
-"06-Jan-24 00:00:34" : validations : INFO : The DataFrame validation by count df_count() is completed.
-"06-Jan-24 00:00:34" : validations : INFO : The DataFrame validation by top 10 record df_top10_rec() is started for DataFrame df_fact ..
-"06-Jan-24 00:00:34" : validations : INFO : The DataFrame top 10 records are: ...
-"06-Jan-24 00:00:35" : validations : INFO : 
+"06-Jan-24 00:24:49" : validations : INFO : The DataFrame validation by to 10 record df_top10_rec() is completed.
+"06-Jan-24 00:24:51" : presc_run_data_ingest : INFO : The load_files() is started ...
+"06-Jan-24 00:24:54" : presc_run_data_ingest : INFO : The input file /user/hadoop/Projects/PrescPipeline/staging/Fact is loaded to the data frame
+"06-Jan-24 00:24:54" : presc_run_data_ingest : INFO : The load_files() is completed ...
+"06-Jan-24 00:24:54" : validations : INFO : The DataFrame validation by count df_count() is started for the dataframe df_fact ...
+"06-Jan-24 00:24:55" : validations : INFO : The dataframe count is 105.
+"06-Jan-24 00:24:55" : validations : INFO : The DataFrame validation by count df_count() is completed.
+"06-Jan-24 00:24:55" : validations : INFO : The DataFrame validation by top 10 record df_top10_rec() is started for DataFrame df_fact ..
+"06-Jan-24 00:24:55" : validations : INFO : The DataFrame top 10 records are: ...
+"06-Jan-24 00:24:55" : validations : INFO : 
  	       npi nppes_provider_last_org_name nppes_provider_first_name nppes_provider_city nppes_provider_state specialty_description description_flag                     drug_name                   generic_name  bene_count  total_claim_count  total_30_day_fill_count  total_day_supply  total_drug_cost  bene_count_ge65 bene_count_ge65_suppress_flag  total_claim_count_ge65 ge65_suppress_flag  total_30_day_fill_count_ge65  total_day_supply_ge65  total_drug_cost_ge65 year_exp
 1437118403                        QUINN                    RACHEL       FORT ATKINSON                   WI       Family Practice                S         METHENAMINE HIPPURATE          METHENAMINE HIPPURATE         NaN                NaN                     13.0               366          1159.13              NaN                             *                     NaN                  *                           NaN                    NaN                   NaN    = 2.0
 1437118403                        QUINN                    RACHEL       FORT ATKINSON                   WI       Family Practice                S         METHENAMINE HIPPURATE          METHENAMINE HIPPURATE         NaN               99.0                     13.0               366          1159.13              NaN                             *                     NaN                  *                           NaN                    NaN                   NaN    = 2.0
@@ -46,13 +46,13 @@ Philadelphia Philadelphia       PA         Pennsylvania        42101         Phi
 1770779761                       KONTIR                   NATALEE          HOMER CITY                   PA       Family Practice                S             ZOLPIDEM TARTRATE              ZOLPIDEM TARTRATE         NaN               18.0                     26.0               780            40.76              NaN                             *                    18.0               None                          26.0                  780.0                 40.76    = 6.0
 1518906262                     MATTIACE                   WILLIAM        WILLIAMSPORT                   PA       Family Practice                S                          None           ROSUVASTATIN CALCIUM        13.0               67.0                     91.0              2730         22141.56              NaN                             #                     NaN                  #                           NaN                    NaN                   NaN    = 6.0
 1437312485                    GERRIETTS                  JENNIFER            JOHNSTON                   IA       Family Practice                S               INSULIN SYRINGE SYRING-NEEDL,DISP,INSUL,0.3 ML         NaN               17.0                     17.3               465           515.41              NaN                             *                    17.0               None                          17.3                  465.0                515.41   = 19.0
-"06-Jan-24 00:00:35" : validations : INFO : The DataFrame validation by to 10 record df_top10_rec() is completed.
-"06-Jan-24 00:00:35" : presc_run_data_preprocessor : INFO : perform_data_clean() is started for df_city dataframe...
-"06-Jan-24 00:00:35" : presc_run_data_preprocessor : INFO : perform_data_clean() is started for df_fact dataframe...
-"06-Jan-24 00:00:35" : presc_run_data_preprocessor : INFO : perform_data_clean() is completed.
-"06-Jan-24 00:00:35" : validations : INFO : The DataFrame validation by top 10 record df_top10_rec() is started for DataFrame df_city_sel ..
-"06-Jan-24 00:00:35" : validations : INFO : The DataFrame top 10 records are: ...
-"06-Jan-24 00:00:36" : validations : INFO : 
+"06-Jan-24 00:24:55" : validations : INFO : The DataFrame validation by to 10 record df_top10_rec() is completed.
+"06-Jan-24 00:24:55" : presc_run_data_preprocessor : INFO : perform_data_clean() is started for df_city dataframe...
+"06-Jan-24 00:24:55" : presc_run_data_preprocessor : INFO : perform_data_clean() is started for df_fact dataframe...
+"06-Jan-24 00:24:56" : presc_run_data_preprocessor : INFO : perform_data_clean() is completed.
+"06-Jan-24 00:24:56" : validations : INFO : The DataFrame validation by top 10 record df_top10_rec() is started for DataFrame df_city_sel ..
+"06-Jan-24 00:24:56" : validations : INFO : The DataFrame top 10 records are: ...
+"06-Jan-24 00:24:56" : validations : INFO : 
  	        city state_id           state_name          county_name  population                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                zips
     NEW YORK       NY             NEW YORK             NEW YORK    18713220 11229 11226 11225 11224 11222 11221 11220 11385 10169 10168 10167 10165 10162 10282 10280 10040 10044 11109 11104 11105 11379 11378 11377 11697 11694 11692 11693 11691 10271 10279 10278 10075 10302 10301 10452 11451 10475 10474 10471 10470 10473 10472 11228 11223 10103 11368 11369 11366 11367 11364 11365 11362 11363 11360 11361 10028 10029 10026 10027 10024 10025 10022 10023 10020 10021 11212 11213 11210 11211 11216 11217 11214 11215 11218 11219 10152 10153 10154 10307 10306 10305 11429 10310 10311 10312 10314 11432 11433 11430 11436 11434 11435 10453 10451 10457 10456 10455 10454 10459 10458 10128 10004 10005 10006 10007 10001 10002 10003 10009 11238 11239 11230 11231 11232 11233 11234 11235 11236 11237 11375 11374 11371 11370 11373 11372 10170 10171 10172 10173 10174 10177 11351 10039 10038 10035 10034 10037 10036 10031 10030 10033 10032 11201 11208 11203 11205 11204 11207 11206 11209 11411 11412 11413 11414 11415 11416 11417 11418 11419 11101 11102 11103 11106 11001 11005 11004 10065 10069 10199 10309 10308 10304 10303 11428 11421 11420 11423 11422 11425 11424 11427 11426 10466 10467 10464 10465 10462 10463 10460 10461 10468 10469 10119 10115 10112 10110 10111 11359 11358 11357 11356 11355 11354 10019 10018 10013 10012 10011 10010 10017 10016 10014 10008 10041 10043 10055 10060 10080 10081 10087 10090 10101 10102 10104 10105 10106 10107 10108 10109 10113 10114 10116 10117 10118 10120 10121 10122 10123 10124 10125 10126 10129 10130 10131 10132 10133 10138 10150 10151 10155 10156 10157 10158 10159 10160 10163 10164 10166 10175 10176 10178 10179 10185 10203 10211 10212 10213 10242 10249 10256 10258 10259 10260 10261 10265 10268 10269 10270 10272 10273 10274 10275 10276 10277 10281 10285 10286 10313 11120 11202 11241 11242 11243 11245 11247 11249 11251 11252 11256 11352 11380 11381 11386 11405 11431 11437 11439 11499 11690 11695
  LOS ANGELES       CA           CALIFORNIA          LOS ANGELES    12750807                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             90291 90293 90292 91316 91311 90037 90031 90008 90004 90005 90006 90007 90001 90002 90003 90710 90089 91344 91345 91340 91342 91343 90035 90034 90036 90033 90032 90039 90247 90248 91436 91371 91605 91604 91607 91601 91602 90402 90068 90069 90062 90063 90061 90066 90067 90064 90065 91326 91324 91325 90013 90012 90011 90010 90017 90016 90015 90014 90019 90090 90095 90094 91042 91040 91411 91352 91356 90041 90042 90043 90044 90045 90046 90047 90048 90049 90018 91423 90210 91303 91304 91306 91307 90079 90071 90077 90059 91608 91606 91331 91330 91335 90026 90027 90024 90025 90023 90020 90021 90028 90029 90272 90732 90731 90230 91406 91405 91403 91402 91401 91367 91364 90038 90057 90058 90744 90501 90502 90009 90030 90050 90051 90053 90054 90055 90060 90070 90072 90074 90075 90076 90078 90080 90081 90082 90083 90084 90086 90087 90088 90093 90099 90134 90189 90213 90294 90295 90296 90733 90734 90748 91041 91043 91305 91308 91309 91313 91327 91328 91329 91333 91334 91337 91346 91353 91357 91365 91392 91393 91394 91395 91396 91404 91407 91408 91409 91410 91412 91413 91416 91426 91470 91482 91495 91496 91499 91603 91609 91610 91611 91612 91614 91615 91616 91617 91618
@@ -64,10 +64,10 @@ PHILADELPHIA       PA         PENNSYLVANIA         PHILADELPHIA     5649300     
      ATLANTA       GA              GEORGIA               FULTON     5449398                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           30334 30331 30332 30309 30308 30305 30307 30303 30354 30327 30322 30326 30324 30319 30342 30306 30318 30316 30317 30314 30315 30312 30313 30310 30311 30363 30301 30302 30304 30321 30325 30333 30343 30348 30353 30355 30357 30361 30368 30369 30370 30371 30375 30377 30392 30394 30398 31106 31107 31126 31139 31141 31193 31195 31196
   WASHINGTON       DC DISTRICT OF COLUMBIA DISTRICT OF COLUMBIA     5379184                                                                                                                                                 20010 20011 20012 20015 20228 20520 20307 20418 20319 20024 20510 20593 20020 20427 20540 20240 20245 20204 20202 20390 20006 20005 20004 20003 20002 20009 20008 20535 20317 20405 20057 20052 20053 20017 20018 20565 20566 20560 20260 20064 20551 20553 20019 20230 20373 20007 20032 20036 20037 20506 20001 20045 20016 20013 20022 20026 20027 20029 20030 20033 20035 20038 20039 20040 20042 20043 20044 20047 20049 20050 20055 20056 20058 20059 20060 20061 20062 20063 20065 20066 20067 20068 20069 20070 20071 20073 20074 20075 20076 20077 20078 20080 20081 20082 20090 20091 20201 20203 20206 20207 20208 20210 20211 20212 20213 20214 20215 20216 20217 20218 20219 20220 20221 20222 20223 20224 20226 20227 20229 20232 20233 20235 20237 20238 20239 20241 20242 20244 20250 20251 20252 20254 20261 20262 20265 20266 20268 20270 20277 20289 20299 20301 20303 20306 20310 20314 20318 20330 20340 20350 20355 20370 20372 20374 20375 20376 20380 20388 20389 20391 20392 20393 20394 20395 20398 20401 20402 20403 20404 20406 20407 20408 20410 20411 20412 20413 20414 20415 20416 20417 20419 20420 20421 20422 20423 20424 20425 20426 20428 20429 20431 20433 20434 20435 20436 20437 20439 20440 20441 20442 20444 20447 20451 20453 20456 20460 20463 20468 20469 20470 20472 20500 20501 20502 20503 20504 20505 20507 20508 20509 20511 20515 20521 20522 20523 20524 20525 20526 20527 20528 20529 20530 20531 20533 20534 20536 20537 20538 20539 20541 20542 20543 20544 20546 20547 20548 20549 20552 20554 20555 20557 20559 20570 20571 20572 20573 20575 20576 20577 20578 20579 20580 20581 20585 20586 20590 20591 20594 20597 20599 56901 56902 56904 56908 56915 56920 56933 56935 56944 56945 56950 56965 56967 56972 56998 56999
       BOSTON       MA        MASSACHUSETTS              SUFFOLK     4688346                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   02120 02121 02122 02124 02125 02126 02127 02128 02129 02467 02210 02215 02119 02118 02111 02110 02113 02115 02114 02116 02199 02134 02136 02135 02132 02131 02130 02203 02163 02152 02108 02109 02112 02117 02123 02133 02137 02196 02201 02205 02206 02211 02212 02217 02222 02241 02283 02284 02293 02297 02298
-"06-Jan-24 00:00:36" : validations : INFO : The DataFrame validation by to 10 record df_top10_rec() is completed.
-"06-Jan-24 00:00:36" : validations : INFO : The DataFrame validation by top 10 record df_top10_rec() is started for DataFrame df_fact_sel ..
-"06-Jan-24 00:00:36" : validations : INFO : The DataFrame top 10 records are: ...
-"06-Jan-24 00:00:38" : validations : INFO : 
+"06-Jan-24 00:24:56" : validations : INFO : The DataFrame validation by to 10 record df_top10_rec() is completed.
+"06-Jan-24 00:24:56" : validations : INFO : The DataFrame validation by top 10 record df_top10_rec() is started for DataFrame df_fact_sel ..
+"06-Jan-24 00:24:56" : validations : INFO : The DataFrame top 10 records are: ...
+"06-Jan-24 00:24:58" : validations : INFO : 
  	  presc_id     presc_city presc_state       presc_spclt  presc_yop           drug_name  trx_cnt  total_day_supply  total_drug_cost country_name   presc_fullName
 1013960756 CATHEDRAL CITY          CA Internal Medicine          7           LACTULOSE       49              1458          1392.42          USA       GARY HUANG
 1023025798    PORT JERVIS          NY Internal Medicine          6       MEMANTINE HCL       42               959          1632.96          USA       GOPAL SHAH
@@ -79,26 +79,26 @@ PHILADELPHIA       PA         PENNSYLVANIA         PHILADELPHIA     5649300     
 1053315424         CANTON          SD   Family Practice         27              LANTUS       12               360          3044.16          USA  MARGARET DEVICK
 1063790400    WORTHINGTON          MN   Family Practice         17  POTASSIUM CHLORIDE      100               769           612.50          USA      ALBOURY SOW
 1063790400    WORTHINGTON          MN   Family Practice         17  POTASSIUM CHLORIDE      100               769           612.50          USA      ALBOURY SOW
-"06-Jan-24 00:00:38" : validations : INFO : The DataFrame validation by to 10 record df_top10_rec() is completed.
-"06-Jan-24 00:00:38" : validations : INFO : The DataFrame Schema validation for dataframe df_fact_sel ...
-"06-Jan-24 00:00:38" : validations : INFO : The Dataframe df_fact_sel schema is: 
-"06-Jan-24 00:00:38" : validations : INFO : 	StructField('presc_id', IntegerType(), True)
-"06-Jan-24 00:00:38" : validations : INFO : 	StructField('presc_city', StringType(), True)
-"06-Jan-24 00:00:38" : validations : INFO : 	StructField('presc_state', StringType(), True)
-"06-Jan-24 00:00:38" : validations : INFO : 	StructField('presc_spclt', StringType(), True)
-"06-Jan-24 00:00:38" : validations : INFO : 	StructField('presc_yop', IntegerType(), True)
-"06-Jan-24 00:00:38" : validations : INFO : 	StructField('drug_name', StringType(), True)
-"06-Jan-24 00:00:38" : validations : INFO : 	StructField('trx_cnt', IntegerType(), True)
-"06-Jan-24 00:00:38" : validations : INFO : 	StructField('total_day_supply', IntegerType(), True)
-"06-Jan-24 00:00:38" : validations : INFO : 	StructField('total_drug_cost', DoubleType(), True)
-"06-Jan-24 00:00:38" : validations : INFO : 	StructField('country_name', StringType(), False)
-"06-Jan-24 00:00:38" : validations : INFO : 	StructField('presc_fullName', StringType(), False)
-"06-Jan-24 00:00:38" : validations : INFO : The DataFrame schema validation is completed.
-"06-Jan-24 00:00:38" : presc_run_data_transform : INFO : Transform city_report() is started ...
-"06-Jan-24 00:00:38" : presc_run_data_transform : INFO : Transform city_report() is completed.
-"06-Jan-24 00:00:38" : validations : INFO : The DataFrame validation by top 10 record df_top10_rec() is started for DataFrame df_city_final ..
-"06-Jan-24 00:00:38" : validations : INFO : The DataFrame top 10 records are: ...
-"06-Jan-24 00:00:42" : validations : INFO : 
+"06-Jan-24 00:24:58" : validations : INFO : The DataFrame validation by to 10 record df_top10_rec() is completed.
+"06-Jan-24 00:24:58" : validations : INFO : The DataFrame Schema validation for dataframe df_fact_sel ...
+"06-Jan-24 00:24:58" : validations : INFO : The Dataframe df_fact_sel schema is: 
+"06-Jan-24 00:24:58" : validations : INFO : 	StructField('presc_id', IntegerType(), True)
+"06-Jan-24 00:24:58" : validations : INFO : 	StructField('presc_city', StringType(), True)
+"06-Jan-24 00:24:58" : validations : INFO : 	StructField('presc_state', StringType(), True)
+"06-Jan-24 00:24:58" : validations : INFO : 	StructField('presc_spclt', StringType(), True)
+"06-Jan-24 00:24:58" : validations : INFO : 	StructField('presc_yop', IntegerType(), True)
+"06-Jan-24 00:24:58" : validations : INFO : 	StructField('drug_name', StringType(), True)
+"06-Jan-24 00:24:58" : validations : INFO : 	StructField('trx_cnt', IntegerType(), True)
+"06-Jan-24 00:24:58" : validations : INFO : 	StructField('total_day_supply', IntegerType(), True)
+"06-Jan-24 00:24:58" : validations : INFO : 	StructField('total_drug_cost', DoubleType(), True)
+"06-Jan-24 00:24:58" : validations : INFO : 	StructField('country_name', StringType(), False)
+"06-Jan-24 00:24:58" : validations : INFO : 	StructField('presc_fullName', StringType(), False)
+"06-Jan-24 00:24:58" : validations : INFO : The DataFrame schema validation is completed.
+"06-Jan-24 00:24:58" : presc_run_data_transform : INFO : Transform city_report() is started ...
+"06-Jan-24 00:24:58" : presc_run_data_transform : INFO : Transform city_report() is completed.
+"06-Jan-24 00:24:58" : validations : INFO : The DataFrame validation by top 10 record df_top10_rec() is started for DataFrame df_city_final ..
+"06-Jan-24 00:24:58" : validations : INFO : The DataFrame top 10 records are: ...
+"06-Jan-24 00:25:02" : validations : INFO : 
  	        city           state_name          county_name  population  zip_counts  trx_counts  presc_counts
  LOS ANGELES           CALIFORNIA          LOS ANGELES    12750807         196          26             2
 PHILADELPHIA         PENNSYLVANIA         PHILADELPHIA     5649300          86          24             1
@@ -110,22 +110,22 @@ PHILADELPHIA         PENNSYLVANIA         PHILADELPHIA     5649300          86  
     SAN JOSE           CALIFORNIA          SANTA CLARA     1798103          58          18             1
   PITTSBURGH         PENNSYLVANIA            ALLEGHENY     1703266          52          11             1
        BRONX             NEW YORK                BRONX     1418207          25          14             1
-"06-Jan-24 00:00:42" : validations : INFO : The DataFrame validation by to 10 record df_top10_rec() is completed.
-"06-Jan-24 00:00:42" : validations : INFO : The DataFrame Schema validation for dataframe df_city_final ...
-"06-Jan-24 00:00:42" : validations : INFO : The Dataframe df_city_final schema is: 
-"06-Jan-24 00:00:42" : validations : INFO : 	StructField('city', StringType(), True)
-"06-Jan-24 00:00:42" : validations : INFO : 	StructField('state_name', StringType(), True)
-"06-Jan-24 00:00:42" : validations : INFO : 	StructField('county_name', StringType(), True)
-"06-Jan-24 00:00:42" : validations : INFO : 	StructField('population', IntegerType(), True)
-"06-Jan-24 00:00:42" : validations : INFO : 	StructField('zip_counts', IntegerType(), True)
-"06-Jan-24 00:00:42" : validations : INFO : 	StructField('trx_counts', LongType(), True)
-"06-Jan-24 00:00:42" : validations : INFO : 	StructField('presc_counts', LongType(), False)
-"06-Jan-24 00:00:42" : validations : INFO : The DataFrame schema validation is completed.
-"06-Jan-24 00:00:42" : presc_run_data_transform : INFO : Transform top5_presc_report() is started ...
-"06-Jan-24 00:00:43" : presc_run_data_transform : INFO : Transform top5_presc_report() is completed.
-"06-Jan-24 00:00:43" : validations : INFO : The DataFrame validation by top 10 record df_top10_rec() is started for DataFrame df_fact_final ..
-"06-Jan-24 00:00:43" : validations : INFO : The DataFrame top 10 records are: ...
-"06-Jan-24 00:00:44" : validations : INFO : 
+"06-Jan-24 00:25:02" : validations : INFO : The DataFrame validation by to 10 record df_top10_rec() is completed.
+"06-Jan-24 00:25:02" : validations : INFO : The DataFrame Schema validation for dataframe df_city_final ...
+"06-Jan-24 00:25:02" : validations : INFO : The Dataframe df_city_final schema is: 
+"06-Jan-24 00:25:02" : validations : INFO : 	StructField('city', StringType(), True)
+"06-Jan-24 00:25:02" : validations : INFO : 	StructField('state_name', StringType(), True)
+"06-Jan-24 00:25:02" : validations : INFO : 	StructField('county_name', StringType(), True)
+"06-Jan-24 00:25:02" : validations : INFO : 	StructField('population', IntegerType(), True)
+"06-Jan-24 00:25:02" : validations : INFO : 	StructField('zip_counts', IntegerType(), True)
+"06-Jan-24 00:25:02" : validations : INFO : 	StructField('trx_counts', LongType(), True)
+"06-Jan-24 00:25:02" : validations : INFO : 	StructField('presc_counts', LongType(), False)
+"06-Jan-24 00:25:02" : validations : INFO : The DataFrame schema validation is completed.
+"06-Jan-24 00:25:02" : presc_run_data_transform : INFO : Transform top5_presc_report() is started ...
+"06-Jan-24 00:25:02" : presc_run_data_transform : INFO : Transform top5_presc_report() is completed.
+"06-Jan-24 00:25:02" : validations : INFO : The DataFrame validation by top 10 record df_top10_rec() is started for DataFrame df_fact_final ..
+"06-Jan-24 00:25:02" : validations : INFO : The DataFrame top 10 records are: ...
+"06-Jan-24 00:25:04" : validations : INFO : 
  	  presc_id   presc_fullName presc_state country_name  presc_yop  trx_cnt  total_day_supply  total_drug_cost
 1033436191        ROY BARCO          AL          USA         23      661             37465          4144.77
 1346399607        NATHAN HO          CA          USA         28       21               374           682.03
@@ -137,578 +137,20 @@ PHILADELPHIA         PENNSYLVANIA         PHILADELPHIA     5649300          86  
 1396968145     BEVERLY CASH          FL          USA         21       12               360            78.08
 1376579706         TZE CHAN          IA          USA         28       16               480           402.17
 1356352116 SUSANNAH FRIEMEL          IA          USA         30       11               330           200.23
-"06-Jan-24 00:00:44" : validations : INFO : The DataFrame validation by to 10 record df_top10_rec() is completed.
-"06-Jan-24 00:00:44" : validations : INFO : The DataFrame Schema validation for dataframe df_fact_final ...
-"06-Jan-24 00:00:44" : validations : INFO : The Dataframe df_fact_final schema is: 
-"06-Jan-24 00:00:44" : validations : INFO : 	StructField('presc_id', IntegerType(), True)
-"06-Jan-24 00:00:44" : validations : INFO : 	StructField('presc_fullName', StringType(), False)
-"06-Jan-24 00:00:44" : validations : INFO : 	StructField('presc_state', StringType(), True)
-"06-Jan-24 00:00:44" : validations : INFO : 	StructField('country_name', StringType(), False)
-"06-Jan-24 00:00:44" : validations : INFO : 	StructField('presc_yop', IntegerType(), True)
-"06-Jan-24 00:00:44" : validations : INFO : 	StructField('trx_cnt', IntegerType(), True)
-"06-Jan-24 00:00:44" : validations : INFO : 	StructField('total_day_supply', IntegerType(), True)
-"06-Jan-24 00:00:44" : validations : INFO : 	StructField('total_drug_cost', DoubleType(), True)
-"06-Jan-24 00:00:44" : validations : INFO : The DataFrame schema validation is completed.
-"06-Jan-24 00:00:44" : presc_run_data_extraction : INFO : The Extraction - extract_files() is started ...
-"06-Jan-24 00:00:49" : presc_run_data_extraction : ERROR : Error in the method extract_files(). An error occurred while calling o351.save.
-: org.apache.spark.SparkException: Job aborted.
-	at org.apache.spark.sql.errors.QueryExecutionErrors$.jobAbortedError(QueryExecutionErrors.scala:651)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:288)
-	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:186)
-	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:113)
-	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:111)
-	at org.apache.spark.sql.execution.command.DataWritingCommandExec.executeCollect(commands.scala:125)
-	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:98)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:109)
-	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:169)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:95)
-	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:779)
-	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
-	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
-	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:94)
-	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:584)
-	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:176)
-	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:584)
-	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:30)
-	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
-	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
-	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
-	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
-	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:560)
-	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:94)
-	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:81)
-	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:79)
-	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:116)
-	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:860)
-	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:390)
-	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:363)
-	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:239)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
-	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
-	at py4j.Gateway.invoke(Gateway.java:282)
-	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
-	at py4j.commands.CallCommand.execute(CallCommand.java:79)
-	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
-	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
-	at java.lang.Thread.run(Thread.java:750)
-Caused by: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 35.0 failed 4 times, most recent failure: Lost task 0.3 in stage 35.0 (TID 26) (ajith-Lenovo-G50-80 executor 1): org.apache.spark.SparkException: Task failed while writing rows.
-	at org.apache.spark.sql.errors.QueryExecutionErrors$.taskFailedWhileWritingRowsError(QueryExecutionErrors.scala:655)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:358)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$write$22(FileFormatWriter.scala:266)
-	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
-	at org.apache.spark.scheduler.Task.run(Task.scala:136)
-	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:548)
-	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1504)
-	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:551)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:750)
-Caused by: org.apache.spark.api.python.PythonException: Traceback (most recent call last):
-  File "/home/hadoop/Projects/BigData-Project-End-to-End/src/main/python/bin/udfs.py", line 7, in column_split_cnt
-    return len(column.split(' '))
-AttributeError: 'NoneType' object has no attribute 'split'
-
-	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.handlePythonException(PythonRunner.scala:559)
-	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:86)
-	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:68)
-	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:512)
-	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
-	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:491)
-	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
-	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
-	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage6.processNext(Unknown Source)
-	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
-	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:760)
-	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:490)
-	at org.apache.spark.sql.execution.datasources.FileFormatDataWriter.writeWithIterator(FileFormatDataWriter.scala:91)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$executeTask$1(FileFormatWriter.scala:341)
-	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1538)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:348)
-	... 9 more
-
-Driver stacktrace:
-	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2668)
-	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2604)
-	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2603)
-	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
-	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
-	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
-	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2603)
-	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1178)
-	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1178)
-	at scala.Option.foreach(Option.scala:407)
-	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1178)
-	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2856)
-	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2798)
-	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2787)
-	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
-	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:952)
-	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2238)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:255)
-	... 41 more
-Caused by: org.apache.spark.SparkException: Task failed while writing rows.
-	at org.apache.spark.sql.errors.QueryExecutionErrors$.taskFailedWhileWritingRowsError(QueryExecutionErrors.scala:655)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:358)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$write$22(FileFormatWriter.scala:266)
-	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
-	at org.apache.spark.scheduler.Task.run(Task.scala:136)
-	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:548)
-	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1504)
-	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:551)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	... 1 more
-Caused by: org.apache.spark.api.python.PythonException: Traceback (most recent call last):
-  File "/home/hadoop/Projects/BigData-Project-End-to-End/src/main/python/bin/udfs.py", line 7, in column_split_cnt
-    return len(column.split(' '))
-AttributeError: 'NoneType' object has no attribute 'split'
-
-	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.handlePythonException(PythonRunner.scala:559)
-	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:86)
-	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:68)
-	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:512)
-	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
-	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:491)
-	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
-	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
-	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage6.processNext(Unknown Source)
-	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
-	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:760)
-	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:490)
-	at org.apache.spark.sql.execution.datasources.FileFormatDataWriter.writeWithIterator(FileFormatDataWriter.scala:91)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$executeTask$1(FileFormatWriter.scala:341)
-	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1538)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:348)
-	... 9 more
-Traceback (most recent call last):
-  File "/home/hadoop/Projects/BigData-Project-End-to-End/src/main/python/bin/presc_run_data_extraction.py", line 13, in extract_files
-    df.coalesce(split_no) \
-  File "/home/hadoop/spark-3.3.4-bin-hadoop3/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 968, in save
-    self._jwrite.save(path)
-  File "/home/hadoop/spark-3.3.4-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip/py4j/java_gateway.py", line 1321, in __call__
-    return_value = get_return_value(
-  File "/home/hadoop/spark-3.3.4-bin-hadoop3/python/lib/pyspark.zip/pyspark/sql/utils.py", line 190, in deco
-    return f(*a, **kw)
-  File "/home/hadoop/spark-3.3.4-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip/py4j/protocol.py", line 326, in get_return_value
-    raise Py4JJavaError(
-py4j.protocol.Py4JJavaError: An error occurred while calling o351.save.
-: org.apache.spark.SparkException: Job aborted.
-	at org.apache.spark.sql.errors.QueryExecutionErrors$.jobAbortedError(QueryExecutionErrors.scala:651)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:288)
-	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:186)
-	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:113)
-	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:111)
-	at org.apache.spark.sql.execution.command.DataWritingCommandExec.executeCollect(commands.scala:125)
-	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:98)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:109)
-	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:169)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:95)
-	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:779)
-	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
-	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
-	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:94)
-	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:584)
-	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:176)
-	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:584)
-	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:30)
-	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
-	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
-	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
-	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
-	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:560)
-	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:94)
-	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:81)
-	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:79)
-	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:116)
-	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:860)
-	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:390)
-	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:363)
-	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:239)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
-	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
-	at py4j.Gateway.invoke(Gateway.java:282)
-	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
-	at py4j.commands.CallCommand.execute(CallCommand.java:79)
-	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
-	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
-	at java.lang.Thread.run(Thread.java:750)
-Caused by: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 35.0 failed 4 times, most recent failure: Lost task 0.3 in stage 35.0 (TID 26) (ajith-Lenovo-G50-80 executor 1): org.apache.spark.SparkException: Task failed while writing rows.
-	at org.apache.spark.sql.errors.QueryExecutionErrors$.taskFailedWhileWritingRowsError(QueryExecutionErrors.scala:655)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:358)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$write$22(FileFormatWriter.scala:266)
-	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
-	at org.apache.spark.scheduler.Task.run(Task.scala:136)
-	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:548)
-	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1504)
-	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:551)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:750)
-Caused by: org.apache.spark.api.python.PythonException: Traceback (most recent call last):
-  File "/home/hadoop/Projects/BigData-Project-End-to-End/src/main/python/bin/udfs.py", line 7, in column_split_cnt
-    return len(column.split(' '))
-AttributeError: 'NoneType' object has no attribute 'split'
-
-	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.handlePythonException(PythonRunner.scala:559)
-	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:86)
-	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:68)
-	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:512)
-	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
-	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:491)
-	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
-	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
-	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage6.processNext(Unknown Source)
-	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
-	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:760)
-	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:490)
-	at org.apache.spark.sql.execution.datasources.FileFormatDataWriter.writeWithIterator(FileFormatDataWriter.scala:91)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$executeTask$1(FileFormatWriter.scala:341)
-	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1538)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:348)
-	... 9 more
-
-Driver stacktrace:
-	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2668)
-	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2604)
-	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2603)
-	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
-	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
-	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
-	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2603)
-	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1178)
-	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1178)
-	at scala.Option.foreach(Option.scala:407)
-	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1178)
-	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2856)
-	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2798)
-	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2787)
-	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
-	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:952)
-	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2238)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:255)
-	... 41 more
-Caused by: org.apache.spark.SparkException: Task failed while writing rows.
-	at org.apache.spark.sql.errors.QueryExecutionErrors$.taskFailedWhileWritingRowsError(QueryExecutionErrors.scala:655)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:358)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$write$22(FileFormatWriter.scala:266)
-	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
-	at org.apache.spark.scheduler.Task.run(Task.scala:136)
-	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:548)
-	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1504)
-	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:551)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	... 1 more
-Caused by: org.apache.spark.api.python.PythonException: Traceback (most recent call last):
-  File "/home/hadoop/Projects/BigData-Project-End-to-End/src/main/python/bin/udfs.py", line 7, in column_split_cnt
-    return len(column.split(' '))
-AttributeError: 'NoneType' object has no attribute 'split'
-
-	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.handlePythonException(PythonRunner.scala:559)
-	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:86)
-	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:68)
-	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:512)
-	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
-	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:491)
-	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
-	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
-	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage6.processNext(Unknown Source)
-	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
-	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:760)
-	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:490)
-	at org.apache.spark.sql.execution.datasources.FileFormatDataWriter.writeWithIterator(FileFormatDataWriter.scala:91)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$executeTask$1(FileFormatWriter.scala:341)
-	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1538)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:348)
-	... 9 more
-
-"06-Jan-24 00:00:49" : root : ERROR : Error occurred in the main() method. An error occurred while calling o351.save.
-: org.apache.spark.SparkException: Job aborted.
-	at org.apache.spark.sql.errors.QueryExecutionErrors$.jobAbortedError(QueryExecutionErrors.scala:651)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:288)
-	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:186)
-	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:113)
-	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:111)
-	at org.apache.spark.sql.execution.command.DataWritingCommandExec.executeCollect(commands.scala:125)
-	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:98)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:109)
-	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:169)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:95)
-	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:779)
-	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
-	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
-	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:94)
-	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:584)
-	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:176)
-	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:584)
-	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:30)
-	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
-	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
-	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
-	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
-	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:560)
-	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:94)
-	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:81)
-	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:79)
-	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:116)
-	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:860)
-	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:390)
-	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:363)
-	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:239)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
-	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
-	at py4j.Gateway.invoke(Gateway.java:282)
-	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
-	at py4j.commands.CallCommand.execute(CallCommand.java:79)
-	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
-	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
-	at java.lang.Thread.run(Thread.java:750)
-Caused by: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 35.0 failed 4 times, most recent failure: Lost task 0.3 in stage 35.0 (TID 26) (ajith-Lenovo-G50-80 executor 1): org.apache.spark.SparkException: Task failed while writing rows.
-	at org.apache.spark.sql.errors.QueryExecutionErrors$.taskFailedWhileWritingRowsError(QueryExecutionErrors.scala:655)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:358)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$write$22(FileFormatWriter.scala:266)
-	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
-	at org.apache.spark.scheduler.Task.run(Task.scala:136)
-	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:548)
-	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1504)
-	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:551)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:750)
-Caused by: org.apache.spark.api.python.PythonException: Traceback (most recent call last):
-  File "/home/hadoop/Projects/BigData-Project-End-to-End/src/main/python/bin/udfs.py", line 7, in column_split_cnt
-    return len(column.split(' '))
-AttributeError: 'NoneType' object has no attribute 'split'
-
-	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.handlePythonException(PythonRunner.scala:559)
-	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:86)
-	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:68)
-	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:512)
-	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
-	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:491)
-	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
-	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
-	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage6.processNext(Unknown Source)
-	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
-	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:760)
-	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:490)
-	at org.apache.spark.sql.execution.datasources.FileFormatDataWriter.writeWithIterator(FileFormatDataWriter.scala:91)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$executeTask$1(FileFormatWriter.scala:341)
-	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1538)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:348)
-	... 9 more
-
-Driver stacktrace:
-	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2668)
-	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2604)
-	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2603)
-	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
-	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
-	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
-	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2603)
-	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1178)
-	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1178)
-	at scala.Option.foreach(Option.scala:407)
-	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1178)
-	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2856)
-	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2798)
-	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2787)
-	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
-	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:952)
-	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2238)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:255)
-	... 41 more
-Caused by: org.apache.spark.SparkException: Task failed while writing rows.
-	at org.apache.spark.sql.errors.QueryExecutionErrors$.taskFailedWhileWritingRowsError(QueryExecutionErrors.scala:655)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:358)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$write$22(FileFormatWriter.scala:266)
-	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
-	at org.apache.spark.scheduler.Task.run(Task.scala:136)
-	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:548)
-	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1504)
-	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:551)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	... 1 more
-Caused by: org.apache.spark.api.python.PythonException: Traceback (most recent call last):
-  File "/home/hadoop/Projects/BigData-Project-End-to-End/src/main/python/bin/udfs.py", line 7, in column_split_cnt
-    return len(column.split(' '))
-AttributeError: 'NoneType' object has no attribute 'split'
-
-	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.handlePythonException(PythonRunner.scala:559)
-	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:86)
-	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:68)
-	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:512)
-	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
-	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:491)
-	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
-	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
-	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage6.processNext(Unknown Source)
-	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
-	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:760)
-	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:490)
-	at org.apache.spark.sql.execution.datasources.FileFormatDataWriter.writeWithIterator(FileFormatDataWriter.scala:91)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$executeTask$1(FileFormatWriter.scala:341)
-	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1538)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:348)
-	... 9 more
-Traceback (most recent call last):
-  File "/home/hadoop/Projects/BigData-Project-End-to-End/src/main/python/bin/run_presc_pipeline.py", line 137, in main
-    extract_files(df_city_final, 'json', dim_path, 1, False, 'bzip2')
-  File "/home/hadoop/Projects/BigData-Project-End-to-End/src/main/python/bin/presc_run_data_extraction.py", line 13, in extract_files
-    df.coalesce(split_no) \
-  File "/home/hadoop/spark-3.3.4-bin-hadoop3/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 968, in save
-    self._jwrite.save(path)
-  File "/home/hadoop/spark-3.3.4-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip/py4j/java_gateway.py", line 1321, in __call__
-    return_value = get_return_value(
-  File "/home/hadoop/spark-3.3.4-bin-hadoop3/python/lib/pyspark.zip/pyspark/sql/utils.py", line 190, in deco
-    return f(*a, **kw)
-  File "/home/hadoop/spark-3.3.4-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip/py4j/protocol.py", line 326, in get_return_value
-    raise Py4JJavaError(
-py4j.protocol.Py4JJavaError: An error occurred while calling o351.save.
-: org.apache.spark.SparkException: Job aborted.
-	at org.apache.spark.sql.errors.QueryExecutionErrors$.jobAbortedError(QueryExecutionErrors.scala:651)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:288)
-	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:186)
-	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:113)
-	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:111)
-	at org.apache.spark.sql.execution.command.DataWritingCommandExec.executeCollect(commands.scala:125)
-	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:98)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:109)
-	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:169)
-	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:95)
-	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:779)
-	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
-	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
-	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:94)
-	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:584)
-	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:176)
-	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:584)
-	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:30)
-	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
-	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
-	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
-	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
-	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:560)
-	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:94)
-	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:81)
-	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:79)
-	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:116)
-	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:860)
-	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:390)
-	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:363)
-	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:239)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
-	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
-	at py4j.Gateway.invoke(Gateway.java:282)
-	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
-	at py4j.commands.CallCommand.execute(CallCommand.java:79)
-	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
-	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
-	at java.lang.Thread.run(Thread.java:750)
-Caused by: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 35.0 failed 4 times, most recent failure: Lost task 0.3 in stage 35.0 (TID 26) (ajith-Lenovo-G50-80 executor 1): org.apache.spark.SparkException: Task failed while writing rows.
-	at org.apache.spark.sql.errors.QueryExecutionErrors$.taskFailedWhileWritingRowsError(QueryExecutionErrors.scala:655)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:358)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$write$22(FileFormatWriter.scala:266)
-	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
-	at org.apache.spark.scheduler.Task.run(Task.scala:136)
-	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:548)
-	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1504)
-	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:551)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:750)
-Caused by: org.apache.spark.api.python.PythonException: Traceback (most recent call last):
-  File "/home/hadoop/Projects/BigData-Project-End-to-End/src/main/python/bin/udfs.py", line 7, in column_split_cnt
-    return len(column.split(' '))
-AttributeError: 'NoneType' object has no attribute 'split'
-
-	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.handlePythonException(PythonRunner.scala:559)
-	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:86)
-	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:68)
-	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:512)
-	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
-	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:491)
-	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
-	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
-	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage6.processNext(Unknown Source)
-	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
-	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:760)
-	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:490)
-	at org.apache.spark.sql.execution.datasources.FileFormatDataWriter.writeWithIterator(FileFormatDataWriter.scala:91)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$executeTask$1(FileFormatWriter.scala:341)
-	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1538)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:348)
-	... 9 more
-
-Driver stacktrace:
-	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2668)
-	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2604)
-	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2603)
-	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
-	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
-	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
-	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2603)
-	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1178)
-	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1178)
-	at scala.Option.foreach(Option.scala:407)
-	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1178)
-	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2856)
-	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2798)
-	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2787)
-	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
-	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:952)
-	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2238)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:255)
-	... 41 more
-Caused by: org.apache.spark.SparkException: Task failed while writing rows.
-	at org.apache.spark.sql.errors.QueryExecutionErrors$.taskFailedWhileWritingRowsError(QueryExecutionErrors.scala:655)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:358)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$write$22(FileFormatWriter.scala:266)
-	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
-	at org.apache.spark.scheduler.Task.run(Task.scala:136)
-	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:548)
-	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1504)
-	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:551)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	... 1 more
-Caused by: org.apache.spark.api.python.PythonException: Traceback (most recent call last):
-  File "/home/hadoop/Projects/BigData-Project-End-to-End/src/main/python/bin/udfs.py", line 7, in column_split_cnt
-    return len(column.split(' '))
-AttributeError: 'NoneType' object has no attribute 'split'
-
-	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.handlePythonException(PythonRunner.scala:559)
-	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:86)
-	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:68)
-	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:512)
-	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
-	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:491)
-	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
-	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
-	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage6.processNext(Unknown Source)
-	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
-	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:760)
-	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:490)
-	at org.apache.spark.sql.execution.datasources.FileFormatDataWriter.writeWithIterator(FileFormatDataWriter.scala:91)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.$anonfun$executeTask$1(FileFormatWriter.scala:341)
-	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1538)
-	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.executeTask(FileFormatWriter.scala:348)
-	... 9 more
-
+"06-Jan-24 00:25:04" : validations : INFO : The DataFrame validation by to 10 record df_top10_rec() is completed.
+"06-Jan-24 00:25:04" : validations : INFO : The DataFrame Schema validation for dataframe df_fact_final ...
+"06-Jan-24 00:25:04" : validations : INFO : The Dataframe df_fact_final schema is: 
+"06-Jan-24 00:25:04" : validations : INFO : 	StructField('presc_id', IntegerType(), True)
+"06-Jan-24 00:25:04" : validations : INFO : 	StructField('presc_fullName', StringType(), False)
+"06-Jan-24 00:25:04" : validations : INFO : 	StructField('presc_state', StringType(), True)
+"06-Jan-24 00:25:04" : validations : INFO : 	StructField('country_name', StringType(), False)
+"06-Jan-24 00:25:04" : validations : INFO : 	StructField('presc_yop', IntegerType(), True)
+"06-Jan-24 00:25:04" : validations : INFO : 	StructField('trx_cnt', IntegerType(), True)
+"06-Jan-24 00:25:04" : validations : INFO : 	StructField('total_day_supply', IntegerType(), True)
+"06-Jan-24 00:25:04" : validations : INFO : 	StructField('total_drug_cost', DoubleType(), True)
+"06-Jan-24 00:25:04" : validations : INFO : The DataFrame schema validation is completed.
+"06-Jan-24 00:25:04" : presc_run_data_extraction : INFO : The Extraction - extract_files() is started ...
+"06-Jan-24 00:25:06" : presc_run_data_extraction : INFO : The Extraction - extract_files() is completed
+"06-Jan-24 00:25:06" : presc_run_data_extraction : INFO : The Extraction - extract_files() is started ...
+"06-Jan-24 00:25:07" : presc_run_data_extraction : INFO : The Extraction - extract_files() is completed
+"06-Jan-24 00:25:07" : root : INFO : run_presc_pipeline.py is completed

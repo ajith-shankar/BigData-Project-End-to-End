@@ -4,4 +4,5 @@ from pyspark.sql.types import IntegerType
 
 @udf(returnType=IntegerType())
 def column_split_cnt(column):
-    return len(column.split(' '))
+    if not column is None:
+        return len(column.split(" "))
