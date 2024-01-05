@@ -7,14 +7,14 @@ logging.config.fileConfig(fname='../utils/logging_to_file.conf')
 logger = logging.getLogger(__name__)
 
 
-def load_files(spark, file_dir, file_format, header, inferSchema):
+def load_files(spark, file_dir, ing_file_format, header, inferSchema):
     try:
         logger.info("The load_files() is started ...")
-        if file_format == 'parquet':
-            df = spark.read.format(file_format).load(file_dir)
+        if ing_file_format == 'parquet':
+            df = spark.read.format(ing_file_format).load(file_dir)
 
-        elif file_format == 'csv':
-            df = spark.read.format(file_format) \
+        elif ing_file_format == 'csv':
+            df = spark.read.format(ing_file_format) \
                 .options(header=header) \
                 .options(inferSchema=inferSchema) \
                 .load(file_dir)

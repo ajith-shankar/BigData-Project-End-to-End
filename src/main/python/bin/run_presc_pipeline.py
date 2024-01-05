@@ -6,6 +6,7 @@ from presc_run_data_preprocessor import perform_data_clean
 from validations import get_curr_date, df_count, df_top10_rec, df_print_schema
 from presc_run_data_ingest import load_files
 from presc_run_data_transform import city_report, top5_presc_report
+from presc_run_data_extraction import extract_files
 import sys
 import logging
 import logging.config
@@ -63,7 +64,7 @@ def main():
             header = gav.header
             inferSchema = gav.inferSchema
 
-        df_city = load_files(spark=spark, file_dir=file_dir, file_format=file_format, header=header,
+        df_city = load_files(spark=spark, file_dir=file_dir, ing_file_format=file_format, header=header,
                              inferSchema=inferSchema)
 
         # validate presc_run_data_ingest script for City_Dim dataframe
@@ -100,7 +101,7 @@ def main():
             header = gav.header
             inferSchema = gav.inferSchema
 
-        df_fact = load_files(spark=spark, file_dir=file_dir, file_format=file_format, header=header,
+        df_fact = load_files(spark=spark, file_dir=file_dir, ing_file_format=file_format, header=header,
                              inferSchema=inferSchema)
 
         # validate presc_run_data_ingest script for Presc_Fact dataframe
@@ -130,6 +131,13 @@ def main():
         # validate
         df_top10_rec(df_fact_final, 'df_fact_final')
         df_print_schema(df_fact_final, 'df_fact_final')
+
+        ### Initiate presc_run_data_extraction script
+        # dim_path = gav.output_dim
+        # extract_files(df_city_final, 'json', dim_path, 1, False, 'bzip2')
+        #
+        # fact_path = gav.output_fact
+        # extract_files(df_fact_final, 'orc', fact_path, 2, False, 'snappy')
 
         logging.info("run_presc_pipeline.py is completed")
 

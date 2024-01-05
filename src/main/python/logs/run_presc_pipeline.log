@@ -1,24 +1,12 @@
-"04-Jan-24 01:16:24" : numexpr.utils : INFO : NumExpr defaulting to 4 threads.
-"04-Jan-24 01:16:24" : root : INFO : run_presc_pipeline.py is started...
-"04-Jan-24 01:16:24" : root : INFO : main() is started...
-"04-Jan-24 01:16:24" : create_objects : INFO : get_spark_object() is started. The 'Prod' env is used.
-"04-Jan-24 01:16:45" : create_objects : INFO : Spark Object is created
-"04-Jan-24 01:16:52" : validations : INFO : Validate the spark object by printing current date : [Row(current_date()=datetime.date(2024, 1, 4))]
-"04-Jan-24 01:16:52" : validations : INFO : Spark object is validated and it is ready
-"04-Jan-24 01:16:54" : root : ERROR : Error occurred in the main() method. local variable 'file_format' referenced before assignment
+"05-Jan-24 22:09:15" : numexpr.utils : INFO : NumExpr defaulting to 4 threads.
+"05-Jan-24 22:09:15" : root : INFO : run_presc_pipeline.py is started...
+"05-Jan-24 22:09:15" : root : INFO : main() is started...
+"05-Jan-24 22:09:15" : create_objects : INFO : get_spark_object() is started. The 'Prod' env is used.
+"05-Jan-24 22:09:30" : create_objects : INFO : Spark Object is created
+"05-Jan-24 22:09:38" : validations : INFO : Validate the spark object by printing current date : [Row(current_date()=datetime.date(2024, 1, 5))]
+"05-Jan-24 22:09:38" : validations : INFO : Spark object is validated and it is ready
+"05-Jan-24 22:09:39" : root : ERROR : Error occurred in the main() method. local variable 'file_format' referenced before assignment
 Traceback (most recent call last):
-  File "/home/hadoop/Projects/BigData-Project-End-to-End/src/main/python/bin/run_presc_pipeline.py", line 66, in main
-    df_city = load_files(spark=spark, file_dir=file_dir, file_format=file_format, header=header,
-UnboundLocalError: local variable 'file_format' referenced before assignment
-"04-Jan-24 01:28:29" : numexpr.utils : INFO : NumExpr defaulting to 4 threads.
-"04-Jan-24 01:28:29" : root : INFO : run_presc_pipeline.py is started...
-"04-Jan-24 01:28:29" : root : INFO : main() is started...
-"04-Jan-24 01:28:29" : create_objects : INFO : get_spark_object() is started. The 'Prod' env is used.
-"04-Jan-24 01:28:50" : create_objects : INFO : Spark Object is created
-"04-Jan-24 01:28:58" : validations : INFO : Validate the spark object by printing current date : [Row(current_date()=datetime.date(2024, 1, 4))]
-"04-Jan-24 01:28:58" : validations : INFO : Spark object is validated and it is ready
-"04-Jan-24 01:28:59" : root : ERROR : Error occurred in the main() method. local variable 'file_format' referenced before assignment
-Traceback (most recent call last):
-  File "/home/hadoop/Projects/BigData-Project-End-to-End/src/main/python/bin/run_presc_pipeline.py", line 66, in main
-    df_city = load_files(spark=spark, file_dir=file_dir, file_format=file_format, header=header,
+  File "/home/hadoop/Projects/BigData-Project-End-to-End/src/main/python/bin/run_presc_pipeline.py", line 67, in main
+    df_city = load_files(spark=spark, file_dir=file_dir, ing_file_format=file_format, header=header,
 UnboundLocalError: local variable 'file_format' referenced before assignment
