@@ -146,8 +146,8 @@ def main():
         data_persist_hive(spark=spark, df=df_fact_final, dfName='df_fact_final', partitionBy='Created_Date', mode='append')
 
         # persist at Postgres
-        data_persist_postgres(spark=spark, df=df_city_final, dfName='df_city_final', url="jdbc:postgresql://localhost:5432/prescpipeline", driver="org.postgresql.Driver", dbtable='df_city_final', mode='append', user="spark", password="spark@123")
-        data_persist_postgres(spark=spark, df=df_fact_final, dfName='df_fact_final', url="jdbc:postgresql://localhost:5432/prescpipeline", driver="org.postgresql.Driver", dbtable='df_fact_final', mode='append', user="spark", password="spark@123")
+        data_persist_postgres(spark=spark, df=df_city_final, dfName='df_city_final', url="jdbc:postgresql://localhost:5432/prescpipeline", driver="org.postgresql.Driver", dbtable='df_city_final', mode='append', user=gav.user, password=gav.password)
+        data_persist_postgres(spark=spark, df=df_fact_final, dfName='df_fact_final', url="jdbc:postgresql://localhost:5432/prescpipeline", driver="org.postgresql.Driver", dbtable='df_fact_final', mode='append', user=gav.user, password=gav.password)
 
 
         ### End of part 1
