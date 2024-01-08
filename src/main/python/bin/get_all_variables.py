@@ -5,11 +5,15 @@ import os
 os.environ['envn'] = 'Prod'  # 'Test' if it local mode
 os.environ['header'] = 'True'
 os.environ['inferSchema'] = 'True'
+os.environ['user'] = 'spark'
+os.environ['password'] = 'spark@123'
 
 # Get environment variables
 envn = os.environ['envn']
 header = os.environ['header']
 inferSchema = os.environ['inferSchema']
+user = os.environ['user']
+password = os.environ['password']
 
 # Set other variables
 appName = "USA Prescriber Report"

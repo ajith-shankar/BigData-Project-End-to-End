@@ -7,6 +7,7 @@ from validations import get_curr_date, df_count, df_top10_rec, df_print_schema
 from presc_run_data_ingest import load_files
 from presc_run_data_transform import city_report, top5_presc_report
 from presc_run_data_extraction import extract_files
+from presc_run_data_persist import data_persist_hive, data_persist_postgres
 import sys
 import logging
 import logging.config
@@ -117,7 +118,6 @@ def main():
         df_top10_rec(df_fact_sel, 'df_fact_sel')
         df_print_schema(df_fact_sel, 'df_fact_sel')
 
-
         ### initiate run_presc_data_transform script
         df_city_final = city_report(df_city_sel, df_fact_sel)
 
@@ -138,6 +138,17 @@ def main():
 
         fact_path = gav.output_fact
         extract_files(df_fact_final, 'orc', fact_path, 2, False, 'snappy')
+
+        ### Initiate presc_run_data_persist script
+        # persist at Hive
+        data_persist_hive(spark=spark, df=df_city_final, dfName='df_city_final', partitionBy='Created_Date',
+                          mode='append')
+        data_persist_hive(spark=spark, df=df_fact_final, dfName='df_fact_final', partitionBy='Created_Date', mode='append')
+
+        # persist at Postgres
+        data_persist_postgres(spark=spark, df=df_city_final, dfName='df_city_final', url="jdbc:postgresql://localhost:5432/prescpipeline", driver="org.postgresql.Driver", dbtable='df_city_final', mode='append', user="spark", password="spark@123")
+        data_persist_postgres(spark=spark, df=df_fact_final, dfName='df_fact_final', url="jdbc:postgresql://localhost:5432/prescpipeline", driver="org.postgresql.Driver", dbtable='df_fact_final', mode='append', user="spark", password="spark@123")
+
 
         ### End of part 1
         logging.info("run_presc_pipeline.py is completed")

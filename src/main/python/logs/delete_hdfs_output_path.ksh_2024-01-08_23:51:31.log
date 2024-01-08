@@ -1,0 +1,8 @@
+delete_hdfs_output_path.ksh Started...: Monday 08 January 2024 11:51:31 PM IST
+The HDFS output directory /user/hadoop/Projects/PrescPipeline/Output/Dim is available. Proceed to delete.
+Deleted /user/hadoop/Projects/PrescPipeline/Output/Dim
+The HDFS Output directory /user/hadoop/Projects/PrescPipeline/Output/Dim is deleted before extraction.
+The HDFS output directory /user/hadoop/Projects/PrescPipeline/Output/Fact is available. Proceed to delete.
+Deleted /user/hadoop/Projects/PrescPipeline/Output/Fact
+The HDFS Output directory /user/hadoop/Projects/PrescPipeline/Output/Fact is deleted before extraction.
+delete_hdfs_output_path.ksh is Completed...: Monday 08 January 2024 11:51:41 PM IST
