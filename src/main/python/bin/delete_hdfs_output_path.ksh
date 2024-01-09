@@ -24,7 +24,6 @@ LOGFILE="/home/hadoop/Projects/BigData-Project-End-to-End/src/main/python/logs/$
 echo "${JOBNAME} Started...: $(date)"
 
 DIM_PATH=/user/hadoop/Projects/PrescPipeline/Output/Dim
-
 hdfs dfs -test -d $DIM_PATH
 status=$?
 if [ $status == 0 ]
@@ -42,6 +41,26 @@ if [ $status == 0 ]
   echo "The HDFS output directory $FACT_PATH is available. Proceed to delete."
   hdfs dfs -rm -r -f $FACT_PATH
   echo "The HDFS Output directory $FACT_PATH is deleted before extraction."
+fi
+
+HIVE_DIM_PATH=/user/hive/warehouse/prescpipeline.db/df_city_final
+hdfs dfs -test -d $HIVE_DIM_PATH
+status=$?
+if [ $status == 0 ]
+  then
+  echo "The HDFS output directory $HIVE_DIM_PATH is available. Proceed to delete."
+  hdfs dfs -rm -r -f $HIVE_DIM_PATH
+  echo "The HDFS Output directory $HIVE_DIM_PATH is deleted before extraction."
+fi
+
+HIVE_FACT_PATH=/user/hive/warehouse/prescpipeline.db/df_fact_final
+hdfs dfs -test -d $HIVE_FACT_PATH
+status=$?
+if [ $status == 0 ]
+  then
+  echo "The HDFS output directory $HIVE_FACT_PATH is available. Proceed to delete."
+  hdfs dfs -rm -r -f $HIVE_FACT_PATH
+  echo "The HDFS Output directory $HIVE_FACT_PATH is deleted before extraction."
 fi
 
 echo "${JOBNAME} is Completed...: $(date)"

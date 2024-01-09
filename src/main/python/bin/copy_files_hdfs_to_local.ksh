@@ -29,6 +29,10 @@ HDFS_OUTPUT_PATH=/user/hadoop/Projects/PrescPipeline/Output
 HDFS_DIM_DIR=${HDFS_OUTPUT_PATH}/Dim
 HDFS_FACT_DIR=${HDFS_OUTPUT_PATH}/Fact
 
+# Delete the files at local if exists
+rm -f ${LOCAL_DIM_DIR}/*
+rm -f ${LOCAL_FACT_DIR}/*
+
 # Copy the output dim & fact files from HDFS to LOCAL
 hdfs dfs -get -f ${HDFS_DIM_DIR}/* ${LOCAL_DIM_DIR}/
 hdfs dfs -get -f ${HDFS_FACT_DIR}/* ${LOCAL_FACT_DIR}/
