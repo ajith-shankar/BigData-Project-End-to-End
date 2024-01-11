@@ -10,10 +10,12 @@ Before starting the Hadoop setup process, ensure that you have the following pre
 
 - **Java Development Kit (JDK):** Hadoop is a Java-based framework, so you need to have Java installed on your system. Download and install the latest JDK from the official Oracle website. In Linux environment, run the below command in terminal.
    ```bash
-   git clone https://github.com/ajith-shankar/BigData-Project-End-to-End.git
+   sudo apt-get install openjdk-8-jdk
    ```
+   
+- **Python3:**    
 - **SSH (Secure Shell):** 
-- **Python3:**
+
 
 Steps for Hadoop Setup
 1. Download Hadoop
