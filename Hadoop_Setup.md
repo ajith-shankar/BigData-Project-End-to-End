@@ -18,8 +18,10 @@ Before starting the Hadoop setup process, ensure that you have the following pre
    sudo apt install python3
    ```
 
-- **SSH (Secure Shell):** 
-
+- **SSH (Secure Shell):** As we plan to install various services on our local machine, establishing an SSH connection is essential for communication with them. Execute the following command to install SSH, and subsequently, we will configure passwordless communication over SSH.
+    ```bash
+   sudo apt install openssh-server openssh-client
+   ```
 
 Steps for Hadoop Setup
 1. Download Hadoop
