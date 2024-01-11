@@ -8,12 +8,16 @@ This guide outlines the steps to set up Apache Hadoop for the BigData Project: E
 
 Before starting the Hadoop setup process, ensure that you have the following prerequisites installed and configured:
 
-- **Java Development Kit (JDK):** Hadoop is a Java-based framework, so you need to have Java installed on your system. Download and install the latest JDK from the official Oracle website. In Linux environment, run the below command in terminal.
+- **Java Development Kit (JDK):** Hadoop is a Java-based framework, so you need to have Java installed on your system. Download and install the latest JDK from the official Oracle website. In a Linux environment, execute the command below in the terminal.
    ```bash
    sudo apt-get install openjdk-8-jdk
    ```
    
-- **Python3:**    
+- **Python3:** As we will be using PySpark, it is necessary to have Python installed. You can install the latest version of Python by executing the following command in the Linux terminal.
+   ```bash
+   sudo apt install python3
+   ```
+
 - **SSH (Secure Shell):** 
 
 
