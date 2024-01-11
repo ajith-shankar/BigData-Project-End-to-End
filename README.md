@@ -28,7 +28,7 @@ Welcome to the BigData Project: End-to-End repository! This project is a compreh
 
 The repository is organized as follows:
 
-- **[data_ingestion](./data_ingestion):** Contains code for ingesting data from various sources.
+- **[Hadoop_Installation](./Hadoop_Setup.md):** Contains code for ingesting data from various sources.
 - **[data_processing](./data_processing):** Includes code for processing and transforming data using Apache Spark and Apache Flink.
 - **[storage](./storage):** Contains configurations and scripts for setting up storage systems like HDFS, Hive, and HBase.
 - **[analytics](./analytics):** Includes code for performing analytics on the processed data.
