@@ -1,12 +1,16 @@
-Certainly! Below is an example of how you might structure the "hadoop_setup.md" file in Markdown format. This assumes that the document will contain instructions for setting up Hadoop for your BigData Project. Feel free to adjust the content based on your project's specific requirements and configurations.
+---
+
+# Hadoop Setup Instructions
 
 This guide outlines the steps to set up Apache Hadoop for the BigData Project: End-to-End. Hadoop is a fundamental component for distributed storage and processing, and the following instructions will help you configure it for seamless integration into your project.
 
-Prerequisites
+## Prerequisites
 
 Before starting the Hadoop setup process, ensure that you have the following prerequisites installed and configured:
 
-    Java Development Kit (JDK): Hadoop is a Java-based framework, so you need to have Java installed on your system. Download and install the latest JDK from the official Oracle website.
+- **Java Development Kit (JDK):** Hadoop is a Java-based framework, so you need to have Java installed on your system. Download and install the latest JDK from the official Oracle website.
+- **SSH (Secure Shell):** 
+- **Python3:**
 
 Steps for Hadoop Setup
 1. Download Hadoop
