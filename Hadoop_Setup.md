@@ -22,8 +22,41 @@ Before starting the Hadoop setup process, ensure that you have the following pre
     ```bash
    sudo apt install openssh-server openssh-client
    ```
+   It is advisable to create a dedicated user for Hadoop, distinct from your root user. Let's create a new user by executing the following commands.
+   ```bash
+   sudo addser hadoop
+   # username=hadoop
+   # password=hadoop
+   ```
+   ```bash
+   sudo usermod -aG sudo hadoop
+   ```
+   Now, swith to the user **hadoop**
+   ```bash
+   sudo su – hadoop
+   ```
+   Now, we will configure passwordless communication
+   ```bash
+   ssh-keygen -t rsa
+   # hit enter 
+   # hit enter 
+   # hit enter
+   ```
+   ```bash
+   cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+   ```
+   ```bash
+   chmod 640 ~/.ssh/authorized_keys
+   ```
+   Verify SSH by
+   ```bash
+   ssh localhost
+   # type yes 
+   # hit enter
+   ```
 
-Steps for Hadoop Setup
+
+### Steps for Hadoop Setup
 1. Download Hadoop
 
 Visit the official Apache Hadoop website (https://hadoop.apache.org/) to download the latest stable release. Choose the appropriate distribution package based on your operating system.
