@@ -28,10 +28,10 @@ Welcome to the BigData Project: End-to-End repository! This project is a compreh
 
 The repository is organized as follows:
 
-- **[Hadoop_Installation](./Hadoop_Setup.md):** Contains code for ingesting data from various sources.
-- **[Postgre_Installation](./PostgreSQL_Setup.md):** Includes code for processing and transforming data using Apache Spark and Apache Flink.
-- **[Hive_Installation](./Hive_Setup.md):** Contains configurations and scripts for setting up storage systems like HDFS, Hive, and HBase.
-- **[Spark_Installation](./Spark_Setup.md):** Includes code for performing analytics on the processed data.
+- **[Hadoop Installation](./Hadoop_Setup.md):** Contains code for ingesting data from various sources.
+- **[Postgre Installation](./PostgreSQL_Setup.md):** Includes code for processing and transforming data using Apache Spark and Apache Flink.
+- **[Hive Installation](./Hive_Setup.md):** Contains configurations and scripts for setting up storage systems like HDFS, Hive, and HBase.
+- **[Spark Installation](./Spark_Setup.md):** Includes code for performing analytics on the processed data.
 - **[visualization](./visualization):** Contains scripts and code for visualizing the analytics results.
 
 ## Getting Started
