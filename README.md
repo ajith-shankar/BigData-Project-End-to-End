@@ -18,13 +18,11 @@ Welcome to the BigData Project: End-to-End repository! This project is a compreh
 
 ## Technologies Used
 
-- **Apache Spark:** For distributed data processing.
-- **Apache Kafka:** For real-time data streaming.
 - **Hadoop Distributed File System (HDFS):** For distributed storage.
+- **Apache Spark:** For distributed data processing.
 - **Apache Hive:** For data warehousing and SQL-like queries.
-- **Apache HBase:** For NoSQL database capabilities.
-- **Apache Flink:** For stream processing.
-- **Apache Zeppelin:** For interactive data analytics and visualization.
+- **PostgreSQL:** For NoSQL database capabilities.
+- **Azure Blob Storage:** For stream processing.
 
 ## Project Structure
 
