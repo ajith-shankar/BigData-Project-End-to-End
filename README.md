@@ -1,5 +1,3 @@
-Certainly! Here's a more comprehensive README file in Markdown format for your BigData Project: End-to-End GitHub repository:
-
 ---
 
 # BigData Project: End-to-End
