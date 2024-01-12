@@ -52,5 +52,19 @@ psql
 ```
 
 5. **Create Databases and Users**
+```sql
+# Superuser i.e. 'postgres'
+
+# Change password of superuser 'postgres'
+ALTER USER postgres WITH ENCRYPTED PASSWORD 'admin@123';
+
+# Create a user for Hive
+CREATE USER hive WITH ENCRYPTED PASSWORD 'hive@123';
+
+# Create a user for Spark
+CREATE USER spark WITH ENCRYPTED PASSWORD 'spark@123';
+```
+
+
 
 
