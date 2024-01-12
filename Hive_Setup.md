@@ -30,9 +30,9 @@ wget https://downloads.apache.org/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz
 
 2. **Extract Hive**
 
-Extract the downloaded Hadoop file
+Extract the downloaded Hive file
 ```bash
-tar xzf hadoop-3.3.6.tar.gz
+tar xzf apache-hive-3.1.2-bin.tar.gz
 ```
 
 
@@ -42,8 +42,7 @@ sudo nano ~/.bashrc
 ```
 
 ```bash
-# Append the following path to the end of the file.
-
+# Append the following path to the end of the file
 export HIVE_HOME= /home/hdoop/apache-hive-3.1.2-bin
 export PATH=$PATH:$HIVE_HOME/bin
 ```
