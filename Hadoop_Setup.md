@@ -79,6 +79,7 @@ Edit the Hadoop configuration files to match your system settings. Key configura
 - `hadoop-env.sh`: Configure Java Home and other environment variables.
 - `core-site.xml`: Configure Hadoop core settings.
 - `hdfs-site.xml`: Configure Hadoop Distributed File System (HDFS) settings.
+- `mapred-site.xml`: Configure MapReduce settings.
 
 Example:
 
