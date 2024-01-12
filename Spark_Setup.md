@@ -106,7 +106,25 @@ spark.yarn.jars                   hdfs:///spark-jars/*.jar
 
 7. **Interlink Spark with Hive**
 
+Copy core-site.xml, hdfs-site.xml and hive-site.xml files into Spark's conf directory
+```bash
+sudo cp $HIVE_HOME/conf/hive-site.xml $SPARK_HOME/conf/
+sudo cp $HADOOP_HOME/etc/hadoop/hdfs-site.xml $SPARK_HOME/conf/
+sudo cp $HADOOP_HOME/etc/hadoop/core-site.xml $SPARK_HOME/conf/
 
+# Install PostgreSQL jar inside Spark Jar folder
+cd $SPARK_HOME/jars
 
+sudo wget https://jdbc.postgresql.org/download/postgresql-42.7.1.jar 
+```
+
+8. **Verify Spark**
+```bash
+# Spark-shell (Scala)
+spark-shell --master yarn --conf spark.ui.port=0
+
+# PySpark
+pyspark --master yarn --conf spark.ui.port=0
+```
 
 
