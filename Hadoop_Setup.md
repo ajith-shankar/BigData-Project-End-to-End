@@ -112,8 +112,10 @@ Edit the Hadoop configuration files to match your system settings. Key configura
 
 `core-site.xml`
 ```bash
+# open in nano editor
 sudo nano $HADOOP_HOME/etc/hadoop/core-site.xml
 
+# add the below properties
 <configuration>
 	<property>
 		<name>fs.defaultFS</name>
