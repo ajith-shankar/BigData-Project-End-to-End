@@ -129,25 +129,42 @@ sudo nano $HADOOP_HOME/etc/hadoop/core-site.xml
 </configuration>
 ```
 
-# Set Java Home in hadoop-env.sh
-export JAVA_HOME=/path/to/your/jdk
+`hdfs-site.xml`
+```bash
+# create a directory to store node metadata
+sudo mkdir -p home/hadoop/dfs
 
-# Configure core-site.xml
+# change the ownership of the directory to user 'hadoop'
+sudo chown -R hadoop:hadoop home/hadoop/dfs
+
+# open in nano editor
+sudo nano $HADOOP_HOME/etc/hadoop/hdfs-site.xml
+
+# add the below properties
 <configuration>
     <property>
-        <name>fs.defaultFS</name>
-        <value>hdfs://localhost:9000</value>
+        <name>dfs.namenode.name.dir</name>
+        <value>file:/home/hadoop/dfs/namenode</value>
     </property>
-</configuration>
-
-# Configure hdfs-site.xml
-<configuration>
+    <property>
+        <name>dfs.datanode.name.dir</name>
+        <value>file:/home/hadoop/dfs/datanode</value>
+    </property>
+    <property>
+        <name>dfs.namenode.checkpoint.dir</name>
+        <value>file:/home/hadoop/dfs/secondaryname</value>
+    </property>
     <property>
         <name>dfs.replication</name>
         <value>1</value>
     </property>
+    <property>
+        <name>dfs.blocksize</name>
+        <value>134217728</value>
+    </property>
 </configuration>
 ```
+
 
 ### 4. Format HDFS
 
