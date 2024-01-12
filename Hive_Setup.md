@@ -55,6 +55,7 @@ source ~/.bashrc
 ```
 
 5. **Create Directories**
+
 Create related directories in HDFS
 ```bash
 hadoop fs -mkdir /tmp
@@ -64,6 +65,7 @@ hadoop fs -chmod g+w /user/hive/warehouse
 ```
 
 6. **Remove conflicting jars**
+
 Delete the conflicting JAR files from the Hive lib directory and transfer the appropriate JAR files from the HDFS lib to the Hive lib directory.
 ```bash
 # remove guava-* jar from Hive lib
@@ -121,6 +123,7 @@ configuration>
 
 
 8. **Configure Hive Metastore**
+
 Hive uses a metastore to store metadata about tables. You can use an embedded Derby database for testing or set up a more robust external database like MySQL or PostgreSQL for production. We will be using PostgreSQL.
 ```bash
 # download the PostgreSQL jar into hive lib folder
