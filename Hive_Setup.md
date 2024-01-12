@@ -9,7 +9,7 @@ This guide outlines the steps to set up Apache Hive for the BigData Project: End
 
 Before starting the Hive setup process, ensure that you have the following prerequisites installed and configured:
 
-- **Java Development Kit (JDK):** Hive relies on Java, so ensure you have the latest JDK installed on your system. Download and install it from the official Oracle website. or refer to the project's [hadoop_setup.md](./Hadoop_Setup.md) for Java setup instructions.
+- **Java Development Kit (JDK):** Hive relies on Java, so ensure you have the latest JDK installed on your system. Download and install it from the official Oracle website, or refer to the project's [hadoop_setup.md](./Hadoop_Setup.md) for Java setup instructions.
 
 - **Hadoop:** Hive runs on top of Hadoop, so ensure you have a working Hadoop installation. Refer to the project's [hadoop_setup.md](./Hadoop_Setup.md) for Hadoop setup instructions.
 
