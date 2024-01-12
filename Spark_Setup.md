@@ -128,3 +128,12 @@ pyspark --master yarn --conf spark.ui.port=0
 ```
 
 
+9. **Access Spark Web UI**
+
+Access the Spark Web UI to verify the successful setup.
+
+- Spark Master Web UI: [http://localhost:8080](http://localhost:8080)
+- Spark Worker Web UI: [http://localhost:8081](http://localhost:8081)
+- Spark History Web UI: [http://localhost:18080](http://localhost:18080)
+
+
