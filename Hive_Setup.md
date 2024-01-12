@@ -82,7 +82,7 @@ Edit the Hadoop configuration files to match your system settings. Key configura
 `hive-site.xml`
 ```bash
 # open in nano editor
-sudo nano $HIVE_HOME/conf
+sudo nano $HIVE_HOME/conf/hive-site.xml
 
 # add the below properties
 configuration>
@@ -120,7 +120,26 @@ configuration>
 ```
 
 
+8. **Configure Hive Metastore**
+Hive uses a metastore to store metadata about tables. You can use an embedded Derby database for testing or set up a more robust external database like MySQL or PostgreSQL for production. We will be using PostgreSQL.
+```bash
+# download the PostgreSQL jar into hive lib folder
+cd $HIVE_HOME/lib/
+```
+```bash
+# download jar 
+wget https://jdbc.postgresql.org/download/postgresql-42.7.1.jar
+```
 
+9. **Start Hive metastore**
+```bash
+schematool -dbType postgres -initSchema
+```
+
+10. **Start Hive CLI**
+```bash
+hive
+```
 
 
 
