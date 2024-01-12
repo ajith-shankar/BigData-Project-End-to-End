@@ -76,7 +76,7 @@ cp $HADOOP_HOME/share/hadoop/hdfs/lib/guava-27.0-jre.jar $HIVE_HOME/lib/
 
 7. **Configure Hive Environment**
 
-Edit the Hadoop configuration files to match your system settings. Key configuration files include:
+Edit the Hive configuration files to match your system settings. Key configuration files include:
 
 - `hive-site.xml`: Configure hive settings.
 
