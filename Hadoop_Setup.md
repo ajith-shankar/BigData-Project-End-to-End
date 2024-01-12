@@ -239,15 +239,10 @@ Access the Hadoop Web UI to verify successful setup:
 
 ## Conclusion
 
-Hadoop is now set up and ready for use in your BigData Project. Ensure that the services are running correctly before proceeding with data processing and analysis tasks.
-
-For additional configuration options and advanced settings, refer to the official Hadoop [documentation](https://hadoop.apache.org/)
-
-```
 You have successfully set up Apache Hadoop for the BigData Project: End-to-End. Ensure that Hadoop services are running, and you can proceed with other components of your project that rely on distributed storage and processing.
 
 Adjust the paths, version numbers, and configuration settings based on your specific requirements. Additionally, consider providing troubleshooting tips or additional resources if needed.
 
-For further configurations and advanced settings, refer to the official Hadoop documentation.
+For additional configuration options and advanced settings, refer to the official Hadoop [documentation](https://hadoop.apache.org/)
 
 Happy data processing!
