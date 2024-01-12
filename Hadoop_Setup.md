@@ -72,7 +72,22 @@ Extract the downloaded Hadoop file
 tar xzf hadoop-3.3.6.tar.gz
 ```
 
-3. **Configure Hadoop Environment**
+3. **Move the extracted file**
+```bash
+sudo mv hadoop-3.3.6 /usr/local/hadoop
+```
+
+5. **Change the ownership of the directory '/usr/local/hadoop' to the user 'hadoop'**
+```bash
+sudo chown -R hadoop:hadoop /usr/local/hadoop
+```
+
+6. **Set the environment variables and path**
+```bash
+sudo nano ~/.bashrc
+```
+ 
+4. **Configure Hadoop Environment**
 
 Edit the Hadoop configuration files to match your system settings. Key configuration files include:
 
@@ -81,8 +96,7 @@ Edit the Hadoop configuration files to match your system settings. Key configura
 - `hdfs-site.xml`: Configure Hadoop Distributed File System (HDFS) settings.
 - `mapred-site.xml`: Configure MapReduce settings.
 
-Example:
-
+`hadoop-env.sh`
 ```bash
 # Set Java Home in hadoop-env.sh
 export JAVA_HOME=/path/to/your/jdk
