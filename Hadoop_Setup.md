@@ -57,14 +57,15 @@ Before starting the Hadoop setup process, ensure that you have the following pre
 
 
 ### Steps for Hadoop Setup
-1. *Download Hadoop*
+1. **Download Hadoop**
 
 Visit the official Apache Hadoop website (https://hadoop.apache.org/) to download the latest stable release. Choose the appropriate distribution package based on your operating system.
 ```bash
 wget https://downloads.apache.org/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz
 ```
 
-2. Extract Hadoop
+
+2. **Extract Hadoop**
 Extract the downloaded Hadoop file
 ```bash
 tar xzf hadoop-3.3.6.tar.gz
