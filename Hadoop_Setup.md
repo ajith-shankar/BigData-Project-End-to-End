@@ -72,7 +72,7 @@ Extract the downloaded Hadoop file
 tar xzf hadoop-3.3.6.tar.gz
 ```
 
-3. Configure Hadoop Environment
+3. **Configure Hadoop Environment**
 
 Edit the Hadoop configuration files to match your system settings. Key configuration files include:
 
