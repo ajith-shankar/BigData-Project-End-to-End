@@ -94,18 +94,39 @@ export HADOOP_HOME = /usr/local/hadoop
 export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
 ```
+
+7. **Enable the changes**
+```bash
+source ~/.bashrc
+```
  
-4. **Configure Hadoop Environment**
+8. **Configure Hadoop Environment**
 
 Edit the Hadoop configuration files to match your system settings. Key configuration files include:
 
-- `hadoop-env.sh`: Configure Java Home and other environment variables.
 - `core-site.xml`: Configure Hadoop core settings.
 - `hdfs-site.xml`: Configure Hadoop Distributed File System (HDFS) settings.
 - `mapred-site.xml`: Configure MapReduce settings.
+- `hadoop-env.sh`: Configure Java Home and other environment variables.
 
-`hadoop-env.sh`
+
+`core-site.xml`
 ```bash
+sudo nano $HADOOP_HOME/etc/hadoop/core-site.xml
+
+<configuration>
+	<property>
+		<name>fs.defaultFS</name>
+		<value>hdfs://localhost:9000</value>
+		<description>Where HDFS NameNode can be found on the network</description>
+	</property>
+	<property>
+		<name>hadoop.tmp.dir</name>
+		<value>/home/hdoop/tmpdata</value>
+	</property>
+</configuration>
+```
+
 # Set Java Home in hadoop-env.sh
 export JAVA_HOME=/path/to/your/jdk
 
