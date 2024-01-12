@@ -13,8 +13,9 @@ Before starting the PostgreSQL setup process, ensure the following prerequisites
 
 
 ### Steps for PostgreSQL Setup
-1. **In root user**
+1. **Download PostgreSQL**
 ```bash
+# switch to root user 
 sudo su - Ajith
 ```
 ```bash
