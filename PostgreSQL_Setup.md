@@ -27,4 +27,30 @@ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-
 
 # Update the package lists
 sudo apt-get update
+```
+
+2. **Install PostgreSQL**
+Install the latest version of PostgreSQL.
+```bash
+sudo apt-get install -y postgresql postgresql-contrib
+```
+
+3. **Verify**
+```bash
+sudo systemctl status postgresql
+```
+
+4. **Connect to Postgre Server**
+```bash
+sudo su – postgres
+
+# access postgre shell by typing
+psql
+
+# print list of users
+\du
+```
+
+5. **Create Databases and Users**
+
 
