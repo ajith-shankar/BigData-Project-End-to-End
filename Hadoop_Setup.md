@@ -64,14 +64,12 @@ Visit the official Apache Hadoop website (https://hadoop.apache.org/) to downloa
 wget https://downloads.apache.org/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz
 ```
 
-
-
-### 2. Extract Hadoop
+2. Extract Hadoop
 
 Extract the downloaded Hadoop tarball:
 
 ```bash
-tar -zxvf hadoop-3.3.1.tar.gz
+tar xzf hadoop-3.3.6.tar.gz
 ```
 
 ### 3. Configure Hadoop Environment
