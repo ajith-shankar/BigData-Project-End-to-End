@@ -79,11 +79,11 @@ GRANT ALL ON SCHEMA public TO hive;
 
 You have successfully set up PostgreSQL for the BigData Project: End-to-End. Ensure that your PostgreSQL database is running, and you can proceed with configuring other components of your project that interact with relational databases.
 
-For further configurations and advanced settings, refer to the official PostgreSQL documentation.[https://www.postgresql.org/docs/](Documentation)
+For further configurations and advanced settings, refer to the official PostgreSQL [documentation](https://www.postgresql.org/docs/).
 
-```
+
 Happy data warehousing!
-```
+
 
 
 
