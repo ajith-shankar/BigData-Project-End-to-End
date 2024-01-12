@@ -16,10 +16,11 @@ Before starting the Hive setup process, ensure that you have the following prere
 
 ### Steps for Hive Setup
 1. **Download Hive**
+
 Swith to the user **hadoop**
    ```bash
    sudo su – hadoop
    ```
-```bash
-wget https://downloads.apache.org/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz
-```
+   ```bash
+   wget https://downloads.apache.org/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz
+   ```
