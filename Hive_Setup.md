@@ -143,6 +143,14 @@ schematool -dbType postgres -initSchema
 hive
 ```
 
+## Conclusion
+
+You have successfully set up Apache Hive for the BigData Project: End-to-End. Ensure that Hive services are running, and you can proceed with configuring other components of your project that interact with Hive for data warehousing and SQL-like queries.
+
+For advanced configurations and additional settings, refer to the official Hive [documentation](https://hive.apache.org/).
+
+Happy querying!
+
 
 
 
