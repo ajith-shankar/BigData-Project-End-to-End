@@ -216,24 +216,21 @@ sudo nano $HADOOP_HOME/etc/hadoop/yarn-site.xml
 ```
 
 
-9. Format HDFS
+9. **Format HDFS**
 
 Format the Hadoop Distributed File System (HDFS) before starting Hadoop:
-
 ```bash
 hdfs namenode -format
 ```
 
-10. Start Hadoop Services
-
-Start the Hadoop services:
+10. **Start Hadoop Services**
 
 ```bash
 start-dfs.sh
 start-yarn.sh
 ```
 
-11. Access Hadoop Web UI
+11. **Access Hadoop Web UI**
 
 Access the Hadoop Web UI to verify successful setup:
 
