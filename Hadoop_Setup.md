@@ -129,6 +129,7 @@ sudo nano $HADOOP_HOME/etc/hadoop/core-site.xml
 </configuration>
 ```
 
+
 `hdfs-site.xml`
 ```bash
 # create a directory to store node metadata
@@ -164,6 +165,37 @@ sudo nano $HADOOP_HOME/etc/hadoop/hdfs-site.xml
     </property>
 </configuration>
 ```
+
+
+`mapred-site.xml`
+```bash
+# open in nano editor
+sudo nano $HADOOP_HOME/etc/hadoop/mapred-site.xml
+
+# add the JAVA path and Hadoop OS type
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+export HADOOP_OS_TYPE=${HADOOP_OS_TYPE:-$(uname -s)}
+```
+
+
+`hadoop-env.sh`
+```bash
+# open in nano editor
+sudo nano $HADOOP_HOME/etc/hadoop/hadoop-env.sh
+
+# add the below properties
+<configuration>
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+    </property>
+    <property>
+        <name>mapreduce.application.classpath</name>
+        <value>$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*:$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/lib/*</value>
+    </property>
+</configuration>
+```
+
 
 
 ### 4. Format HDFS
