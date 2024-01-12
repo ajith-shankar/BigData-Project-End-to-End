@@ -244,13 +244,9 @@ Hadoop is now set up and ready for use in your BigData Project. Ensure that the 
 For additional configuration options and advanced settings, refer to the official Hadoop documentation: [https://hadoop.apache.org/](https://hadoop.apache.org/)
 
 ```
+You have successfully set up Apache Hadoop for the BigData Project: End-to-End. Ensure that Hadoop services are running, and you can proceed with other components of your project that rely on distributed storage and processing.
 
 Adjust the paths, version numbers, and configuration settings based on your specific requirements. Additionally, consider providing troubleshooting tips or additional resources if needed.
-
-
-Conclusion
-
-You have successfully set up Apache Hadoop for the BigData Project: End-to-End. Ensure that Hadoop services are running, and you can proceed with other components of your project that rely on distributed storage and processing.
 
 For further configurations and advanced settings, refer to the official Hadoop documentation.
 

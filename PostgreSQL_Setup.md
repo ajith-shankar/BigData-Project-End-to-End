@@ -47,24 +47,43 @@ sudo su – postgres
 # access postgre shell by typing
 psql
 
-# print list of users
+# to list the users
 \du
+
+# to list the databases
+\l
 ```
 
 5. **Create Databases and Users**
 ```sql
 # Superuser i.e. 'postgres'
 
-# Change password of superuser 'postgres'
+# change password of superuser 'postgres'
 ALTER USER postgres WITH ENCRYPTED PASSWORD 'admin@123';
 
-# Create a user for Hive
+# create a user for Hive
 CREATE USER hive WITH ENCRYPTED PASSWORD 'hive@123';
 
-# Create a user for Spark
+# create a user for Spark
 CREATE USER spark WITH ENCRYPTED PASSWORD 'spark@123';
+
+# create a Database for hive metastore 
+CREATE DATABASE metastore;
+
+# grant all access to the user 'hive'
+GRANT ALL ON DATABASE metastore TO hive;
+GRANT ALL ON SCHEMA public TO hive;
 ```
 
+## Conclusion
+
+You have successfully set up PostgreSQL for the BigData Project: End-to-End. Ensure that your PostgreSQL database is running, and you can proceed with configuring other components of your project that interact with relational databases.
+
+For further configurations and advanced settings, refer to the official PostgreSQL documentation.[https://www.postgresql.org/docs/](Documentation)
+
+```
+Happy data warehousing!
+```
 
 
 
