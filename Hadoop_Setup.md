@@ -108,6 +108,7 @@ Edit the Hadoop configuration files to match your system settings. Key configura
 - `hdfs-site.xml`: Configure Hadoop Distributed File System (HDFS) settings.
 - `mapred-site.xml`: Configure MapReduce settings.
 - `hadoop-env.sh`: Configure Java Home and other environment variables.
+- `yarn-site.xml`: Configure YARN settings.
 
 
 `core-site.xml`
@@ -196,26 +197,43 @@ sudo nano $HADOOP_HOME/etc/hadoop/hadoop-env.sh
 </configuration>
 ```
 
+`yarn-site.xml`
+```bash
+# open in nano editor
+sudo nano $HADOOP_HOME/etc/hadoop/yarn-site.xml
+
+# add the below properties
+<configuration>
+   <property>
+      <name>yarn.nodemanager.aux-services</name>
+      <value>mapreduce_shuffle</value>
+   </property>
+   <property>
+      <name>yarn.nodemanager.env-whitelist</name>
+      <value>HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,JAVA_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_MAPRED_HOME</value>
+   </property>
+</configuration>
+```
 
 
-### 4. Format HDFS
+9. Format HDFS
 
 Format the Hadoop Distributed File System (HDFS) before starting Hadoop:
 
 ```bash
-bin/hdfs namenode -format
+hdfs namenode -format
 ```
 
-### 5. Start Hadoop Services
+10. Start Hadoop Services
 
 Start the Hadoop services:
 
 ```bash
-sbin/start-dfs.sh
-sbin/start-yarn.sh
+start-dfs.sh
+start-yarn.sh
 ```
 
-### 6. Access Hadoop Web UI
+11. Access Hadoop Web UI
 
 Access the Hadoop Web UI to verify successful setup:
 
