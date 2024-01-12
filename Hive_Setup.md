@@ -80,6 +80,7 @@ Edit the Hadoop configuration files to match your system settings. Key configura
 - `hive-site.xml`: Configure hive settings.
 
 `hive-site.xml`
+```bash
 # open in nano editor
 sudo nano $HIVE_HOME/conf
 
