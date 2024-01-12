@@ -117,15 +117,15 @@ sudo nano $HADOOP_HOME/etc/hadoop/core-site.xml
 
 # add the below properties
 <configuration>
-	<property>
-		<name>fs.defaultFS</name>
-		<value>hdfs://localhost:9000</value>
-		<description>Where HDFS NameNode can be found on the network</description>
-	</property>
-	<property>
-		<name>hadoop.tmp.dir</name>
-		<value>/home/hdoop/tmpdata</value>
-	</property>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://localhost:9000</value>
+        <description>Where HDFS NameNode can be found on the network</descripti>
+    </property>
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>/home/hadoop/tmp</value>
+    </property>
 </configuration>
 ```
 
