@@ -61,6 +61,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Feel free to customize the content further based on your project's specifics and requirements.
-
 
