@@ -60,29 +60,11 @@ Before starting the Hadoop setup process, ensure that you have the following pre
 1. Download Hadoop
 
 Visit the official Apache Hadoop website (https://hadoop.apache.org/) to download the latest stable release. Choose the appropriate distribution package based on your operating system.
-
-```markdown
-# Hadoop Setup
-
-This document provides step-by-step instructions for setting up Hadoop as part of the BigData Project: End-to-End. Follow these guidelines to configure Hadoop for distributed storage and processing.
-
-## Prerequisites
-
-Ensure that you have the following prerequisites installed:
-
-- Java Development Kit (JDK)
-- SSH (Secure Shell)
-
-## Steps
-
-### 1. Download Hadoop
-
-Download the Hadoop distribution from the official Apache Hadoop website:
-
 ```bash
-# Example command for downloading Hadoop 3.3.1
-wget https://downloads.apache.org/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz
+wget https://downloads.apache.org/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz
 ```
+
+
 
 ### 2. Extract Hadoop
 
