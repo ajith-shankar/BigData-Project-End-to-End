@@ -17,7 +17,7 @@ Before starting the Hive setup process, ensure that you have the following prere
 ### Steps for Hive Setup
 1. **Download Hive**
 
-Swith to the user **hadoop**
+   Swith to the user **hadoop**
    ```bash
    sudo su – hadoop
    ```
