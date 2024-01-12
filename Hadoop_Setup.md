@@ -86,6 +86,14 @@ sudo chown -R hadoop:hadoop /usr/local/hadoop
 ```bash
 sudo nano ~/.bashrc
 ```
+
+```bash
+# Append the following path to the end of the file.
+
+export HADOOP_HOME = /usr/local/hadoop
+export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+```
  
 4. **Configure Hadoop Environment**
 
