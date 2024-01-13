@@ -48,7 +48,11 @@ Follow these steps to get started with the BigData Project:
    
 3. **Run the Pipeline:**
    ```bash
-   run_pipeline.ksh
+   # goto the corresponding directory
+   cd src/main/python/bin
+   ```
+   ```bash
+   ./run_pipeline.ksh
    ```   
 3. **Explore the specific directories based on your interest (data_ingestion, data_processing, storage, analytics, visualization).**
 4. **Refer to the README files in each directory for detailed instructions.**
