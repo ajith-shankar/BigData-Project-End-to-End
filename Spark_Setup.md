@@ -127,8 +127,13 @@ spark-shell --master yarn --conf spark.ui.port=0
 pyspark --master yarn --conf spark.ui.port=0
 ```
 
+9. **Start Spark Services**
+```bash
+start-all.sh
+```
 
-9. **Access Spark Web UI**
+
+10. **Access Spark Web UI**
 
 Access the Spark Web UI to verify the successful setup.
 
