@@ -18,6 +18,12 @@ def load_files(spark, file_dir, ing_file_format, header, inferSchema):
                 .options(header=header) \
                 .options(inferSchema=inferSchema) \
                 .load(file_dir)
+
+        elif ing_file_format == 'json':
+            df = spark.read.format(ing_file_format) \
+                .option("multiline", "true") \
+                .json(file_dir)
+
     except Exception as exp:
         logger.error("Error in the method load_files(). " + str(exp))
         raise

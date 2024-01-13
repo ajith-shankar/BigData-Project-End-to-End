@@ -65,8 +65,12 @@ def main():
             header = gav.header
             inferSchema = gav.inferSchema
 
-        df_city = load_files(spark=spark, file_dir=file_dir, ing_file_format=file_format, header=header,
-                             inferSchema=inferSchema)
+        elif 'json' in out.decode():
+            file_format = 'json'
+            header = 'NA'
+            inferSchema = 'NA'
+
+        df_city = load_files(spark=spark, file_dir=file_dir, ing_file_format=file_format, header=header, inferSchema=inferSchema)
 
         # validate presc_run_data_ingest script for City_Dim dataframe
         df_count(df_city, 'df_city')
