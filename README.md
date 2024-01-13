@@ -21,8 +21,8 @@ Welcome to the BigData Project: End-to-End repository! This project is a compreh
 - **Hadoop Distributed File System (HDFS):** For distributed storage.
 - **Apache Spark:** For distributed data processing.
 - **Apache Hive:** For data warehousing and SQL-like queries.
-- **PostgreSQL:** For NoSQL database capabilities.
-- **Azure Blob Storage:** For stream processing.
+- **PostgreSQL:** For organizes data into tables with rows and columns.
+- **Azure Blob Storage:** For object storage.
 
 ## Project Structure
 
@@ -32,7 +32,6 @@ The repository is organized as follows:
 - **[PostgreSQL Installation](./PostgreSQL_Setup.md):** Includes code for processing and transforming data using Apache Spark and Apache Flink.
 - **[Hive Installation](./Hive_Setup.md):** Contains configurations and scripts for setting up storage systems like HDFS, Hive, and HBase.
 - **[Spark Installation](./Spark_Setup.md):** Includes code for performing analytics on the processed data.
-- **[visualization](./visualization):** Contains scripts and code for visualizing the analytics results.
 
 ## Getting Started
 
