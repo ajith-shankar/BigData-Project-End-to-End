@@ -35,6 +35,33 @@ The repository is organized as follows:
 
 ## Getting Started
 
+
+Project Folder Structure
+BigData-Project-End-to-End/
+└── src/
+    └── main/
+        ├── Staging/
+        │   ├── Dim/
+        │   │   └── USA_City.json
+        │   └── Fact/
+        │       └── USA_Prescriber.csv
+        ├── Python/
+        │   ├── bin/
+        │   │   ├── run_pipeline.ksh
+        │   │   └── .....*.py 
+        │   ├── lib/
+        │   │   └── PostgreSQL.jar
+        │   ├── logs/
+        │   │   ├── run_pipeline.log
+        │   │   └── ....._current_date.log
+        │   └── utils/
+        │       └── logging_to_file.conf
+        ├── sql/
+        │   └── create_table.sql
+        └── Output/
+            ├── Dim
+            └── Fact
+
 Follow these steps to get started with the BigData Project:
 
 1. **Clone the repository:**
