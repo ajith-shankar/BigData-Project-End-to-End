@@ -29,6 +29,13 @@ HDFS_STAGING_PATH=/user/hadoop/Projects/PrescPipeline/staging
 HDFS_DIM_DIR=${HDFS_STAGING_PATH}/Dim
 HDFS_FACT_DIR=${HDFS_STAGING_PATH}/Fact
 
+### delete hdfs Dim and Fact
+hdfs dfs -rm -r ${HDFS_STAGING_PATH}
+
+### create directory in hdfs
+hdfs dfs -mkdir -p ${HDFS_DIM_DIR}
+hdfs dfs -mkdir -p ${HDFS_FACT_DIR}
+
 ### Copy the City  and Fact file to HDFS
 hdfs dfs -put -f ${LOCAL_DIM_DIR}/* ${HDFS_DIM_DIR}/
 hdfs dfs -put -f ${LOCAL_FACT_DIR}/* ${HDFS_FACT_DIR}/

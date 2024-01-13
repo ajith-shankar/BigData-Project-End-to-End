@@ -13,7 +13,7 @@ printf "\nCalling copy_files_local_to_hdfs.ksh at `date +"%x_%T"` ....\n"
 ${PROJ_FOLDER}/python/bin/copy_files_local_to_hdfs.ksh
 printf "Executing the copy_files_local_to_hdfs.ksh is completed at `date +"%x_%T"`.\n"
 
-# Call the delete HDFS path wrapper
+# Call the delete HDFS Output path wrapper
 printf "\nCalling delete_hdfs_output_path.ksh at `date +"%x_%T"` ....\n"
 ${PROJ_FOLDER}/python/bin/delete_hdfs_output_path.ksh
 printf "Executing delete_hdfs_output_path.ksh is completed at `date +"%x_%T"`.\n"
