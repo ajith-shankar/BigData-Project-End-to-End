@@ -26,7 +26,8 @@ Welcome to the BigData Project: End-to-End repository! This project is a compreh
 
 ## Project Structure
 
-Project Folder Structure
+The repository is organized as follows:
+
 ```img
 BigData-Project-End-to-End/
 └── src/
@@ -53,9 +54,6 @@ BigData-Project-End-to-End/
             ├── Dim
             └── Fact
 ```
-
-
-The repository is organized as follows:
 
 - **[Hadoop Installation](./Hadoop_Setup.md):** Contains code for ingesting data from various sources.
 - **[PostgreSQL Installation](./PostgreSQL_Setup.md):** Includes code for processing and transforming data using Apache Spark and Apache Flink.
