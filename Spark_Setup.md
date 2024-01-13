@@ -129,7 +129,13 @@ pyspark --master yarn --conf spark.ui.port=0
 
 9. **Start Spark Services**
 ```bash
+cd $SPARK_HOME/sbin
+
+# start Spark master and worker
 start-all.sh
+
+# start spark history server
+start-history-server.sh
 ```
 
 
