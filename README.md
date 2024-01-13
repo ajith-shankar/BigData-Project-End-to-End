@@ -37,6 +37,7 @@ The repository is organized as follows:
 
 
 Project Folder Structure
+```img
 BigData-Project-End-to-End/
 └── src/
     └── main/
@@ -61,6 +62,7 @@ BigData-Project-End-to-End/
         └── Output/
             ├── Dim
             └── Fact
+```
 
 Follow these steps to get started with the BigData Project:
 
