@@ -27,3 +27,8 @@ printf "Executing run_presc_pipeline.py is completed at `date +"%x_%T"`.\n"
 printf "\nCalling copy_files_hdfs_to_local.ksh at `date +"%x_%T"` ....\n"
 ${PROJ_FOLDER}/python/bin/copy_files_hdfs_to_local.ksh
 printf "Executing copy_files_hdfs_to_local.ksh is completed at `date +"%x_%T"`.\n"
+
+# call copy_files_local_to_azure.ksh to copy output files from local to copy_files_local_to_azure
+printf "\nCalling copy_files_local_to_azure.ksh at `date +"%x_%T"` ....\n"
+$PROJ_FOLDER}/python/bin/copy_files_local_to_azure.ksh
+printf "Executing copy_files_local_to_azure.ksh is completed at `date +"%x_%T"`.\n"

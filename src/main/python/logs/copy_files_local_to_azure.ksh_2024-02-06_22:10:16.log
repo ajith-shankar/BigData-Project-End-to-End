@@ -1,0 +1,12 @@
+copy_files_local_to_azure.ksh Started...: Tuesday 06 February 2024 10:10:16 PM IST
+INFO: Scanning...
+INFO: Any empty folders will not be processed, because source and/or destination doesn't have full folder support
+
+failed to perform copy command due to error: cannot start job due to error: open /home/hadoop/Projects/BigData-Project-End-to-End/src/main/output/Dim: no such file or directory.
+
+INFO: Scanning...
+INFO: Any empty folders will not be processed, because source and/or destination doesn't have full folder support
+
+failed to perform copy command due to error: cannot start job due to error: open /home/hadoop/Projects/BigData-Project-End-to-End/src/main/output/Fact: no such file or directory.
+
+copy_files_local_to_azure.ksh is Completed...: Tuesday 06 February 2024 10:10:16 PM IST

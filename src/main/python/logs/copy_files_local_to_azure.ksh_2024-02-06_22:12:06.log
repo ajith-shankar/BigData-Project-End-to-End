@@ -1,0 +1,52 @@
+copy_files_local_to_azure.ksh Started...: Tuesday 06 February 2024 10:12:06 PM IST
+INFO: Scanning...
+INFO: Any empty folders will not be processed, because source and/or destination doesn't have full folder support
+
+Job 61d466c3-f2e5-1a48-4338-1eb47b22a682 has started
+Log file is located at: /home/hadoop/.azcopy/61d466c3-f2e5-1a48-4338-1eb47b22a682.log
+
+INFO: Could not read destination length. If the destination is write-only, use --check-length=false on the command line.
+100.0 %, 2 Done, 0 Failed, 0 Pending, 0 Skipped, 2 Total, 2-sec Throughput (Mb/s): 0.0071
+
+
+Job 61d466c3-f2e5-1a48-4338-1eb47b22a682 summary
+Elapsed Time (Minutes): 0.0334
+Number of File Transfers: 2
+Number of Folder Property Transfers: 0
+Number of Symlink Transfers: 0
+Total Number of Transfers: 2
+Number of File Transfers Completed: 2
+Number of Folder Transfers Completed: 0
+Number of File Transfers Failed: 0
+Number of Folder Transfers Failed: 0
+Number of File Transfers Skipped: 0
+Number of Folder Transfers Skipped: 0
+TotalBytesTransferred: 1771
+Final Job Status: Completed
+
+INFO: Scanning...
+INFO: Any empty folders will not be processed, because source and/or destination doesn't have full folder support
+
+Job 52f72140-91da-5d4d-6ba7-6169215c32d4 has started
+Log file is located at: /home/hadoop/.azcopy/52f72140-91da-5d4d-6ba7-6169215c32d4.log
+
+INFO: Could not read destination length. If the destination is write-only, use --check-length=false on the command line.
+100.0 %, 2 Done, 0 Failed, 0 Pending, 0 Skipped, 2 Total, 2-sec Throughput (Mb/s): 0.0092
+
+
+Job 52f72140-91da-5d4d-6ba7-6169215c32d4 summary
+Elapsed Time (Minutes): 0.0334
+Number of File Transfers: 2
+Number of Folder Property Transfers: 0
+Number of Symlink Transfers: 0
+Total Number of Transfers: 2
+Number of File Transfers Completed: 2
+Number of Folder Transfers Completed: 0
+Number of File Transfers Failed: 0
+Number of Folder Transfers Failed: 0
+Number of File Transfers Skipped: 0
+Number of Folder Transfers Skipped: 0
+TotalBytesTransferred: 2299
+Final Job Status: Completed
+
+copy_files_local_to_azure.ksh is Completed...: Tuesday 06 February 2024 10:12:10 PM IST
