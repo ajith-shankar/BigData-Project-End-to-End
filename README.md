@@ -2,7 +2,7 @@
 
 # BigData Project: USA-Healthcare-Report
 
-![BigData Project](https://img.shields.io/badge/BigData-End--to--End-blue)
+![BigData Project](https://img.shields.io/badge/BigData-USA--Healthcare--Report-blue)
 
 ## Overview
 
