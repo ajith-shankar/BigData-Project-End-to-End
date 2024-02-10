@@ -16,7 +16,7 @@ user = os.environ['user']
 password = os.environ['password']
 
 # Set other variables
-appName = "USA Prescriber Report"
+appName = "US Prescriber Report"
 currentPath = os.getcwd()
 # local path
 # staging_dim_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../', 'staging/Dim'))
