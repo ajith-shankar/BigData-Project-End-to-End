@@ -2,7 +2,7 @@
 
 # Hive Setup Instructions
 
-This guide outlines the steps to set up Apache Hive for the BigData Project: USA-Healthcare-Report. Hive is used for data warehousing and SQL-like queries, providing a higher-level abstraction for processing and analyzing large datasets.
+This guide outlines the steps to set up Apache Hive for the BigData Project: US-Prescribers-Report. Hive is used for data warehousing and SQL-like queries, providing a higher-level abstraction for processing and analyzing large datasets.
 
 
 ## Prerequisites
@@ -146,7 +146,7 @@ hive
 
 ## Conclusion
 
-You have successfully set up Apache Hive for the BigData Project: USA-Healthcare-Report. Ensure that Hive services are running, and you can proceed with configuring other components of your project that interact with Hive for data warehousing and SQL-like queries.
+You have successfully set up Apache Hive for the BigData Project: US-Prescribers-Report. Ensure that Hive services are running, and you can proceed with configuring other components of your project that interact with Hive for data warehousing and SQL-like queries.
 
 For advanced configurations and additional settings, refer to the official Hive [documentation](https://hive.apache.org/).
 
