@@ -6,7 +6,7 @@
 
 ## Overview
 
-Welcome to the BigData Project: End-to-End repository! This project is a comprehensive solution for handling large-scale data processing using various Big Data technologies. Whether you're a data engineer, data scientist, or anyone interested in working with big data, this repository provides a versatile platform for end-to-end data processing.
+Welcome to the BigData Project: USA-Healthcare-Report repository! This project is a comprehensive solution for handling large-scale data processing using various Big Data technologies. Whether you're a data engineer, data scientist, or anyone interested in working with big data, this repository provides a versatile platform for end-to-end data processing.
 
 ## Features
 
@@ -29,7 +29,7 @@ Welcome to the BigData Project: End-to-End repository! This project is a compreh
 The repository is organized as follows:
 
 ```img
-BigData-Project-End-to-End/
+USA-Healthcare-Report/
 └── src/
     └── main/
         ├── Staging/
@@ -66,11 +66,11 @@ Follow these steps to get started with the BigData Project:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/ajith-shankar/BigData-Project-End-to-End.git
+   git clone https://github.com/ajith-shankar/USA-Healthcare-Report.git
    ```
 2. **Navigate to the project directory:**
    ```bash
-   cd BigData-Project-End-to-End
+   cd USA-Healthcare-Report
    ```
    
 3. **Run the Pipeline:**
