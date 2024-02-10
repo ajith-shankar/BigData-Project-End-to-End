@@ -2,7 +2,7 @@
 
 # Apache Spark Setup Instructions
 
-This guide outlines the steps to set up Apache Spark for the BigData Project: End-to-End. Apache Spark is a distributed data processing framework that provides fast in-memory data processing capabilities.
+This guide outlines the steps to set up Apache Spark for the BigData Project: USA-Healthcare-Report. Apache Spark is a distributed data processing framework that provides fast in-memory data processing capabilities.
 
 ## Prerequisites
 
@@ -151,7 +151,7 @@ Access the Spark Web UI to verify the successful setup.
 ## Conclusion
 
 
-You have successfully set up Apache Spark for the BigData Project: End-to-End. Ensure that Spark services are running, and you can proceed with configuring other components of your project that utilize Spark for distributed data processing.
+You have successfully set up Apache Spark for the BigData Project: USA-Healthcare-Report. Ensure that Spark services are running, and you can proceed with configuring other components of your project that utilize Spark for distributed data processing.
 
 For advanced configurations and additional settings, refer to the official Spark [documentation](https://spark.apache.org/).
 

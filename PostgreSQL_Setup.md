@@ -2,7 +2,7 @@
 
 # PostgreSQL Setup Instructions
 
-This guide provides step-by-step instructions for setting up PostgreSQL as part of the BigData Project: End-to-End. PostgreSQL is a powerful open-source relational database that can serve as a robust data storage solution for your project.
+This guide provides step-by-step instructions for setting up PostgreSQL as part of the BigData Project: USA-Healthcare-Report. PostgreSQL is a powerful open-source relational database that can serve as a robust data storage solution for your project.
 
 ## Prerequisites
 
@@ -77,7 +77,7 @@ GRANT ALL ON SCHEMA public TO hive;
 
 ## Conclusion
 
-You have successfully set up PostgreSQL for the BigData Project: End-to-End. Ensure that your PostgreSQL database is running, and you can proceed with configuring other components of your project that interact with relational databases.
+You have successfully set up PostgreSQL for the BigData Project: USA-Healthcare-Report. Ensure that your PostgreSQL database is running, and you can proceed with configuring other components of your project that interact with relational databases.
 
 For further configurations and advanced settings, refer to the official PostgreSQL [documentation](https://www.postgresql.org/docs/).
 

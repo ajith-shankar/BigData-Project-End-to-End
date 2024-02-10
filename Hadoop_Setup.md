@@ -2,7 +2,7 @@
 
 # Hadoop Setup Instructions
 
-This guide outlines the steps to set up Apache Hadoop for the BigData Project: End-to-End. Hadoop is a fundamental component for distributed storage and processing, and the following instructions will help you configure it for seamless integration into your project.
+This guide outlines the steps to set up Apache Hadoop for the BigData Project: USA-Healthcare-Report. Hadoop is a fundamental component for distributed storage and processing, and the following instructions will help you configure it for seamless integration into your project.
 
 ## Prerequisites
 
@@ -239,7 +239,7 @@ Access the Hadoop Web UI to verify successful setup:
 
 ## Conclusion
 
-You have successfully set up Apache Hadoop for the BigData Project: End-to-End. Ensure that Hadoop services are running, and you can proceed with other components of your project that rely on distributed storage and processing.
+You have successfully set up Apache Hadoop for the BigData Project: USA-Healthcare-Report. Ensure that Hadoop services are running, and you can proceed with other components of your project that rely on distributed storage and processing.
 
 Adjust the paths, version numbers, and configuration settings based on your specific requirements. Additionally, consider providing troubleshooting tips or additional resources if needed.
 
