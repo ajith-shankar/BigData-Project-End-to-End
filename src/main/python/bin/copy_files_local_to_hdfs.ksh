@@ -12,7 +12,7 @@ JOBNAME="copy_files_local_to_hdfs.ksh"
 date=$(date '+%Y-%m-%d_%H:%M:%S')
 
 # Define a Log File where lpgs would be generated
-LOGFILE="/home/hadoop/Projects/BigData-Project-End-to-End/src/main/python/logs/copy_files_local_to_hdfs_${date}.log"
+LOGFILE="/home/hadoop/Projects/US-Prescribers-Report/src/main/python/logs/copy_files_local_to_hdfs_${date}.log"
 
 ###########################################################################
 ### COMMENTS: From this point on, all standard output and standard error will
@@ -21,7 +21,7 @@ LOGFILE="/home/hadoop/Projects/BigData-Project-End-to-End/src/main/python/logs/c
 {  # <--- Start of the log file.
 echo "${JOBNAME} Started...: $(date)"
 
-LOCAL_STAGING_PATH="/home/hadoop/Projects/BigData-Project-End-to-End/src/main/staging"
+LOCAL_STAGING_PATH="/home/hadoop/Projects/US-Prescribers-Report/src/main/staging"
 LOCAL_DIM_DIR=${LOCAL_STAGING_PATH}/Dim
 LOCAL_FACT_DIR=${LOCAL_STAGING_PATH}/Fact
 

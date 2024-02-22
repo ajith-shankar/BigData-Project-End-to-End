@@ -5,7 +5,7 @@
 # PURPOSE: Master script to run the entire pipeline        #
 ############################################################
 
-PROJ_FOLDER="/home/${USER}/Projects/BigData-Project-End-to-End/src/main/"
+PROJ_FOLDER="/home/${USER}/Projects/US-Prescribers-Report/src/main/"
 echo $PROJ_FOLDER
 
 # Call the copy_files_local_to_hdfs.ksh wrapper to copy files from local to hdfs
@@ -30,5 +30,5 @@ printf "Executing copy_files_hdfs_to_local.ksh is completed at `date +"%x_%T"`.\
 
 # call copy_files_local_to_azure.ksh to copy output files from local to copy_files_local_to_azure
 printf "\nCalling copy_files_local_to_azure.ksh at `date +"%x_%T"` ....\n"
-$PROJ_FOLDER}/python/bin/copy_files_local_to_azure.ksh
+#$PROJ_FOLDER}/python/bin/copy_files_local_to_azure.ksh
 printf "Executing copy_files_local_to_azure.ksh is completed at `date +"%x_%T"`.\n"

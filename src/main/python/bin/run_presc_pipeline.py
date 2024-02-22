@@ -16,7 +16,7 @@ import os
 
 # load the logging configuration file
 
-# path = os.path.join(os.path.expanduser('~'), 'Documents' ,'BigData-Project-End-to-End', 'src', 'main', 'util', 'logging_to_file.conf')
+# path = os.path.join(os.path.expanduser('~'), 'Documents' ,'US-Prescribers-Report', 'src', 'main', 'util', 'logging_to_file.conf')
 # path_rslv = path.split(path.dirname(path.abspath(__file__)))[0:]
 # file_name = path.join(*[".." for dotdot in range(len(path_rslv))], "logging_to_file.conf")
 logging.config.fileConfig(fname='../utils/logging_to_file.conf')

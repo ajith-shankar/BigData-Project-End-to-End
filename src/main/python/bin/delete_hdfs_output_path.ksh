@@ -13,7 +13,7 @@ JOBNAME="delete_hdfs_output_path.ksh"
 date=$(date '+%Y-%m-%d_%H:%M:%S')
 
 # Define a Log File where logs would be generated
-LOGFILE="/home/hadoop/Projects/BigData-Project-End-to-End/src/main/python/logs/${JOBNAME}_${date}.log"
+LOGFILE="/home/hadoop/Projects/US-Prescribers-Report/src/main/python/logs/${JOBNAME}_${date}.log"
 
 ###########################################################################
 ### COMMENTS: From this point on, all standard output and standard error will
