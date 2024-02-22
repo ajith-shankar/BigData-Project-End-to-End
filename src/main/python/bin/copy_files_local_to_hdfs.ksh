@@ -1,8 +1,8 @@
 ############################################################
-# Developed By:                                            #
-# Developed Date:                                          # 
-# Script NAME:                                             #
-# PURPOSE: Copy input vendor files from local to HDFS.     #
+# Developed By:    Ajith S                                 #
+# Developed Date:  03/01/2024                              #
+# Script NAME:     copy_files_local_to_hdfs.ksh            #
+# PURPOSE: Copy input files from local to HDFS.            #
 ############################################################
 
 # Declare a variable to hold the unix script name.
