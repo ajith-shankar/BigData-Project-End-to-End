@@ -1,7 +1,7 @@
 ############################################################
-# Developed By:                                            #
-# Developed Date:                                          #
-# Script NAME:                                             #
+# Developed By:    Ajith S                                 #
+# Developed Date:  22/01/2024                              #
+# Script NAME:     run_presc_pipeline.ksh                  #
 # PURPOSE: Master script to run the entire pipeline        #
 ############################################################
 
