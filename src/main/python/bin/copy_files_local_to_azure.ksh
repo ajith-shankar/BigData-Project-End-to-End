@@ -1,7 +1,7 @@
 ############################################################
-# Developed By:                                            #
-# Developed Date:                                          #
-# Script NAME:                                             #
+# Developed By:       Ajith S                              #
+# Developed Date:     16/01/2024                           #
+# Script NAME:        copy_files_local_to_azure.ksh        #
 # PURPOSE: Delete HDFS Output paths so that Spark
 #          extraction will be smooth.                      #
 ############################################################
@@ -16,7 +16,7 @@ date=$(date '+%Y-%m-%d_%H:%M:%S')
 subdir_name=$(date '+%Y-%m-%d-%H-%M-%S')
 
 # Define a Log File where logs would be generated
-LOGFILE="/home/hadoop/Projects/BigData-Project-End-to-End/src/main/python/logs/${JOBNAME}_${date}.log"
+LOGFILE="/home/hadoop/Projects/US-Prescribers-Report/src/main/python/logs/${JOBNAME}_${date}.log"
 
 ###########################################################################
 ### COMMENTS: From this point on, all standard output and standard error will
@@ -27,7 +27,7 @@ LOGFILE="/home/hadoop/Projects/BigData-Project-End-to-End/src/main/python/logs/$
 echo "${JOBNAME} Started...: $(date)"
 
 ### Local OutPut path
-LOCAL_OUTPUT_PATH="/home/hadoop/Projects/BigData-Project-End-to-End/src/main/output"
+LOCAL_OUTPUT_PATH="/home/hadoop/Projects/US-Prescribers-Report/src/main/output"
 LOCAL_DIM_DIR=${LOCAL_OUTPUT_PATH}/dim
 LOCAL_FACT_DIR=${LOCAL_OUTPUT_PATH}/fact
 
