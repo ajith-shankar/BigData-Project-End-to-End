@@ -154,7 +154,7 @@ def main():
         data_persist_postgres(spark=spark, df=df_fact_final, dfName='df_fact_final', url="jdbc:postgresql://localhost:5432/prescpipeline", driver="org.postgresql.Driver", dbtable='df_fact_final', mode='append', user=gav.user, password=gav.password)
 
 
-        ### End of part 1
+        ### End
         logging.info("run_presc_pipeline.py is completed")
 
     except Exception as exp:
