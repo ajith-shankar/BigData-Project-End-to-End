@@ -1,7 +1,7 @@
 ############################################################
-# Developed By:                                            #
-# Developed Date:                                          #
-# Script NAME:                                             #
+# Developed By:      Ajith S                               #
+# Developed Date:    15/01/2024                            #
+# Script NAME:       copy_files_hdfs_to_local.ksh          #
 # PURPOSE: Copy output  files from HDFS to LOCAL.          #
 ############################################################
 
