@@ -1,7 +1,7 @@
 ############################################################
-# Developed By:                                            #
-# Developed Date:                                          # 
-# Script NAME:                                             #
+# Developed By:    Ajith S                                 #
+# Developed Date:  05/01/2024                              #
+# Script NAME:     delete_hdfs_output_path.ksh             #
 # PURPOSE: Delete HDFS Output paths so that Spark 
 #          extraction will be smooth.                      #
 ############################################################
