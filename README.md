@@ -8,8 +8,7 @@
 
 Welcome to the BigData Project: US-Prescribers-Report repository! This project is a comprehensive solution for handling large-scale data processing using various Big Data technologies. Whether you're a data engineer, data scientist, or anyone interested in working with big data, this repository provides a versatile platform for end-to-end data processing.
 
-<img src="./images/DataFlow_1.png" widthh="700"/>
-#![DataFlow](./images/DataFlow_1.png?raw=true "DataFlow")
+![DataFlow](./images/DataFlow_1.png?raw=true "DataFlow")
 
 
 ## Features
