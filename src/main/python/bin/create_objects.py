@@ -16,7 +16,11 @@ def get_spark_object(envn, appName):
             master = 'local'
         else:
             master = 'yarn'
-        spark = SparkSession.builder.master(master).appName(appName).getOrCreate()
+        spark = (SparkSession.builder.master(master)
+                 .appName(appName)
+                 .config("spark.sql.warehouse.dir", "/user/hive/warehouse/")
+                 .enableHiveSupport()
+                 .getOrCreate())
 
     except NameError as exp:
         logger.error("NameError in the method get_spark_object(). " + str(exp), exc_info=True)

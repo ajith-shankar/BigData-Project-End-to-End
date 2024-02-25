@@ -29,6 +29,8 @@ Welcome to the BigData Project: US-Prescribers-Report repository! This project i
 
 ## Project Structure
 
+![US-Prescribers-Report](./images/Project1.png?raw=true "Project Main")
+
 The repository is organized as follows:
 
 ```img
